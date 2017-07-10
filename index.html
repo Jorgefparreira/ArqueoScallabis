@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<title>ArqueoScallabis</title>
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#home"><img class="img-responsive" src="img/logo.png">ArqueoScallabis</a>
+		    </div> <!-- end navbar-header -->
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#projects">Projectos</a></li>
+		        <li><a href="#contact">Contactos</a></li>
+		        <li><a href="#facs">FAQ's</a></li>
+		      </ul>
+		    </div> <!-- end collapse -->
+		  </div> <!-- end container -->
+		</nav>
+
+
+												<!-- INTRO -->
+
+
+
+		<div class="container-fluid carousel-container" id="home">
+			<div id="intro-carousel" class="carousel slide" data-ride="carousel">
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="img/header0.jpg">
+			    </div>
+			    <div class="item">
+			      <img src="img/header1.jpg">
+			    </div>
+			    <div class="item">
+			      <img src="img/header2.jpg">
+			    </div>			    
+			  </div> <!-- end carousel-inner -->
+			</div> <!-- end carousel -->
+		</div> <!-- end container -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Quem Somos</h2>
+				</div>
+				<div class="col-md-4">
+					<img src="img/QuemSomos.jpg" alt="..." class="img-responsive text-img">
+				</div>
+				<div class="col-md-8">
+					<p>A ArqueoScallabis é uma empresa no ramo da Arqueologia, salvaguarda e gestão patrimonial, que nasceu da vontade de um grupo de profissionais, todos formados em Arqueologia e História pela Faculdade de Letras de Lisboa, e com um percurso consolidado na área, através dos mais diversos trabalhos, em vários pontos do País.
+					Sediada na secular cidade de Santarém, a ArqueoScallabis está estruturada de forma a dar resposta ao mais variados projectos no âmbito da minimização de impactes sobre o património, seja através da reabilitação urbana, obras públicas, estudos de impacte ambiental, ou qualquer outro projecto que necessite da componente arqueológica para ser concluído com sucesso.
+					</p>
+				</div>
+			</div> <!-- end row -->
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Missão</h2>
+					<p>A nossa missão é contribuir de forma inovadora e positiva para os projectos dos nossos clientes, com serviços realizados de acordo com as normas de qualidade e excelência que prezamos dentro da nossa Empresa. </p>
+				</div>
+				<div class="col-md-6">
+					<h2>Valores</h2>
+					<p>Caracterizamo-nos pelo gosto e respeito pelo Património Histórico, Arqueológico e Natural, assim como pelo seu papel na nossa herança e identidade cultural. 
+					Ao mesmo tempo valorizamos uma relação transparente e em parceria estreita com os nossos clientes, oferecendo soluções de qualidade adaptadas aos seus projectos.
+					</p>
+				</div>
+			</div> <!-- end row -->
+			<br>
+			<div class="row">	
+				<div class="col-md-6">
+					<h2>Equipa</h2>
+					<p>A ArqueoScallabis é composta por uma equipa multidisciplinar, jovem e dinâmica, com elevados padrões éticos e profissionais, com experiência nas áreas da Arqueologia, Museologia e Serviços Educativos. </p>	
+				</div>
+				<div class="col-md-6">
+					<h2>Serviços</h2>
+					<p class="service-list">Estudos de Impacte Ambiental; <br>
+						Prospecção arqueológica; <br>
+						Acompanhamento arqueológico; <br>
+						Escavação arqueológica; <br>
+						Elaboração de Cartas arqueológicas; <br>
+						Musealização de espaços; <br>
+						Serviços Educativos;</p>
+				</div>								
+			</div> <!-- end row -->
+		</div> <!-- end container -->
+			<br>
+			<hr>
+
+
+
+												<!-- PROJECTS -->
+
+
+		<div class="container" ng-app="arqueoApp" ng-controller="projectController">
+			<div class="scrollspy-offset" id="projects"></div>												
+			<div class="row">
+				<h1>Projectos</h1>
+				<br>
+				<div ng-repeat="project in projects">
+					<div class="col-md-6">
+						<div class="project-box">
+							<h3>{{project.name}}</h3>
+							<br>
+							<img type="button" ng-src="{{ project.image }}" class="img-responsive project-img project-img-border" data-toggle="modal" data-target="#{{project.id}}">
+							<!-- Modal -->
+							<div class="modal fade" id="{{project.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        <h3 class="modal-title" id="myModalLabel">{{project.name}}</h3>
+							      </div>
+							      <div class="modal-body">
+											<img ng-src="{{project.modalImage1}}" class="img-responsive project-img modal-img">
+											<br>
+											<img ng-src="{{project.modalImage2}}" class="img-responsive project-img modal-img">	
+											<br>
+											<img ng-src="{{project.modalImage3}}" class="img-responsive project-img modal-img">										
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+							      </div>
+							    </div> <!-- end modal-content -->
+							  </div> <!-- end modal-dialog -->
+							</div> <!-- end modal -->
+						</div> <!-- end project-box -->
+					</div> <!-- end col -->
+				</div> <!-- end ng-repeat -->
+			</div> <!-- end row -->
+		</div> <!-- end container -->
+			<br>
+			<hr>
+
+
+												<!-- CONTACT -->
+
+
+		<div class="container">
+			<div class="scrollspy-offset" id="contact"></div>									
+			<div class="row">
+				<h1>Contactos</h1>
+				<br>
+				<br>
+				<div class="col-md-12">
+					<p><span class="contact-item">Morada:</span> CIES - Centro de Inovação Empresarial de Santarém, Largo Infante Santo. 2005-246 Santarém <br>
+					*De momento, qualquer assunto a tratar em Sede de Empresa está sujeito a marcação prévia.</p>
+					<p><span class="contact-item">Telemóvel:</span> 927710788 /918506990</p>
+					<p><span class="contact-item">E-mail: </span><span class="contact-reverse">tp.siballacsoeuqra@lareg</span> </p>
+					<br>
+			    <div id="map"></div>
+			    <br>
+					<br>
+				</div>
+		    <div class="col-md-12">
+		      <form action="https://formspree.io/jorgefparreira@gmail.com" method="POST">
+		        <div class="form-group">
+		          <label for="name" class="sr-only">Nome</label>
+		          <input type="text" placeholder="Nome" class="form-control" name="name" id="name">
+		        </div>
+		        <div class="form-group">
+		          <label for="phone" class="sr-only">Telefone</label>
+		          <input type="tel" placeholder="Telefone" pattern="[0-9]{6,}" class="form-control" name="phone" id="phone">
+		        </div>
+		        <div class="form-group">
+		          <label for="email" class="sr-only">E-mail</label>
+		          <input type="email" placeholder="E-mail*" title="Enter your email" required="required" class="form-control" name="_replyto" id="email">
+		        </div>
+		        <label for="message-box" class="sr-only">Mensagem</label>
+		        <textarea style="resize:none" placeholder="Mensagem*" cols="40" rows="5" minlength="10" required="required" class="form-control" name="message" id="message-box"></textarea>
+		        <p id="char-count"></p>
+		        <div id="visible-comment-box">
+		          <p id="visible-comment" class="comment-style"></p>
+		          <p class="comment-style" id="visible-comment2"></p>
+		        </div>
+		        <br>
+		        <button type="submit" value="Send" class="btn btn-primary my-button" id="submit-button">Enviar</button>
+		      </form>
+		    </div> <!--  end col -->
+		  </div> <!-- end row -->
+		</div> <!-- end container -->
+		<br>
+		<br>
+	  <hr>
+
+
+												<!-- FAQ'S -->
+
+
+		<div class="container">
+			<div class="scrollspy-offset" id="facs"></div>
+	    <div class="row">
+	    	<div class="col-md-12">
+		    	<h1>FAQ's</h1>
+		    	<br>
+		      <div class="panel-group" role="tablist" aria-multiselectable="true">
+		        <div class="panel panel-default">
+		          <div class="panel-heading" role="tab" id="question-one">
+		            <h4 class="panel-title">
+		              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#faq" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> <span class="glyphicon glyphicon-plus"></span> ArqueoScallabis?</a>
+		            </h4>
+		          </div><!--  end panel-heading -->
+		          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="question-one">
+		            <div class="panel-body">
+		              <p>Pois claro!</p>
+		            </div><!--  end panel-body -->
+		          </div><!--  end panel-collapse -->
+		        </div> <!-- end panel-default -->
+		      </div> <!-- end panel-group -->
+		    </div> <!-- end col -->
+		  </div> <!-- end row -->	
+	    <br>
+	    <br>
+	    <div class="row">
+	    	<div class="col-md-12">
+	    	<h2>Links úteis</h2>
+		    	<ul class="other-links">
+		    		<li><a href="http://arqueologia.patrimoniocultural.pt/">Portal do Arqueólogo</a></li>
+		    		<li><a href="http://www.patrimoniocultural.gov.pt">Direção Geral do Património Cultural: DGPC</a></li>
+		    		<li><a href="https://dre.pt/">Diário da República Eletrónico</a></li>
+		    	</ul>	    	
+	    	</div>
+	    </div>	<!-- end row -->			
+	  </div> <!-- end container -->
+
+
+												<!-- FOOTER -->
+
+
+		<footer>
+			<div class="container-fluid">
+				<div class="row footer-row">
+					<br>
+					<a href="https://www.facebook.com/arqueoscallabis" target="_blank"><img src="img/facebook.png" class="social-media-link"></a>
+					<a href="https://www.instagram.com/arqueoscallabis/" target="_blank"><img src="img/instagram.png" class="social-media-link"></a>
+					<p>© Copyright  2017 ArqueoScallabis. All rights reserved. <br>
+					Web Administrator - <a href="http://webarchaeologist.bitballoon.com/">Jorge Parreira</a>
+					</p>
+				</div>
+			</div> <!-- end container -->
+		</footer>
+
+
+												<!-- JAVASCRIPT -->
+
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap core JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- document.ready functions -->
+
+    <script>
+    	$(document).ready(function(){
+				//scrollspy
+				$('body').scrollspy({target: ".navbar"});
+
+				$(".navbar a").on('click', function(event) {
+
+			  	if (this.hash !== "") {
+
+				    event.preventDefault();
+
+				    var hash = this.hash;
+
+				    $('html, body').animate({
+				      scrollTop: $(hash).offset().top
+				    }, 800, function(){
+
+				      window.location.hash = hash;
+				    });
+				  } 
+				});
+
+			  //textarea color
+			  $("#name, #phone, #email, #message-box").on({  	
+			    focus: function(){
+			      $(this).css("background-color", "#e8eff9");
+			  	},
+			    focusout: function(){
+			      $(this).css("background-color", "white");
+			  	},
+				});			  
+
+			});
+
+    </script>
+
+    <!-- google maps api -->
+
+    <script>
+      function initMap() {
+        var hqMarker = {lat: 39.238926, lng: -8.685768};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: hqMarker
+        });
+        var marker = new google.maps.Marker({
+          position: hqMarker,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvewJnnhpKz6lLe9TUwOkHII9KHO1x7yE&callback=initMap">
+    </script>
+
+    <!-- angular.js -->
+
+		<script>
+		var app = angular.module('arqueoApp', []);
+		app.controller('projectController', ['$scope', function($scope) { 
+		  $scope.projects = [
+		    {
+		      id: "example1",
+		      name: "Encostas de Santarém",
+		      image: "img/Encostas_de_Santarem_Albergaria_Sao_Martinho.jpg",
+		      modalImage1: "img/Encostas_de_Santarem_Sondagem_2.jpg",
+		      modalImage2: "img/Encostas_de_Santarem_Faincas.jpg",
+		      modalImage3: "img/Encostas_de_Santarem_Bordo_Decorado.jpg"
+		    },
+		    {
+		      id: "example2",
+		      name: "Igreja de Santa Iria",
+		      image: "img/Igreja_Santa_Iria_Ribeira_de_Santarém_Zona_Obra.jpg",
+		      modalImage1: "img/Igreja_Santa_Iria_Ribeira_de_Santarem.jpg",
+		      modalImage2: "img/Igreja_Santa_Iria_Ribeira_de_Santarem_Tabalhos.jpg",
+		      modalImage3: "img/Igreja_Santa_Iria_Ribeira_de_Santarem_Tabalhos_2.jpg"
+		    }
+		  ];
+		}]);
+		</script>
+	</body>
+</html>
