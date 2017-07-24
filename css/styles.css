@@ -5,6 +5,7 @@
 
 p {
 	font-size: 1.2em;
+	text-align: justify;
 }
 
 a,
@@ -24,7 +25,8 @@ h2 {
   font-size: 30px;
 }
 
-a:hover {
+a:hover,
+a:active {
 	cursor: pointer;
 	text-decoration: none;
 	color: #ababab;
@@ -166,11 +168,21 @@ hr:after {
 	width: 100%;
 }
 
+.submit-btn {
+	background-color: #ffad2b;
+	border-color: #e59a24;
+}
+
+.submit-btn:hover {
+	background-color: #d18712 !important;
+	border-color: #e59a24;
+}
 
   /*** FAQ's ***/
 
+
 .panel-heading {
-	background-color: #3d3d3d !important;	
+	background-color: #3d3d3d !important;
 }
 
 .panel-heading a {

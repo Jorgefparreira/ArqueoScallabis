@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="arqueoApp">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#home"><img class="img-responsive" src="img/logo.png">ArqueoScallabis</a>
+		      <a class="navbar-brand" href="#home"><img class="img-responsive" src="img/logo.png" alt="logo">ArqueoScallabis</a>
 		    </div> <!-- end navbar-header -->
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -49,13 +49,13 @@
 			<div id="intro-carousel" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner" role="listbox">
 			    <div class="item active">
-			      <img src="img/header0.jpg">
+			      <img src="img/header0.jpg" alt="church 1">
 			    </div>
 			    <div class="item">
-			      <img src="img/header1.jpg">
+			      <img src="img/header1.jpg" alt="church 2">
 			    </div>
 			    <div class="item">
-			      <img src="img/header2.jpg">
+			      <img src="img/header2.jpg" alt="church 3">
 			    </div>			    
 			  </div> <!-- end carousel-inner -->
 			</div> <!-- end carousel -->
@@ -113,7 +113,7 @@
 												<!-- PROJECTS -->
 
 
-		<div class="container" ng-app="arqueoApp" ng-controller="projectController">
+		<div class="container" ng-controller="projectController">
 			<div class="scrollspy-offset" id="projects"></div>												
 			<div class="row">
 				<h1>Projectos</h1>
@@ -164,16 +164,11 @@
 				<br>
 				<br>
 				<div class="col-md-12">
-					<p><span class="contact-item">Morada:</span> CIES - Centro de Inovação Empresarial de Santarém, Largo Infante Santo. 2005-246 Santarém <br>
-					*De momento, qualquer assunto a tratar em Sede de Empresa está sujeito a marcação prévia.</p>
-					<p><span class="contact-item">Telemóvel:</span> 927710788 /918506990</p>
-					<p><span class="contact-item">E-mail: </span><span class="contact-reverse">tp.siballacsoeuqra@lareg</span> </p>
-					<br>
-			    <div id="map"></div>
+			  	<div id="map"></div>
 			    <br>
-					<br>
+					<br>			  				
 				</div>
-		    <div class="col-md-12">
+		    <div class="col-md-6">
 		      <form action="https://formspree.io/jorgefparreira@gmail.com" method="POST">
 		        <div class="form-group">
 		          <label for="name" class="sr-only">Nome</label>
@@ -195,9 +190,17 @@
 		          <p class="comment-style" id="visible-comment2"></p>
 		        </div>
 		        <br>
-		        <button type="submit" value="Send" class="btn btn-primary my-button" id="submit-button">Enviar</button>
+		        <button type="submit" value="Send" class="btn btn-primary submit-btn" id="submit-button">Enviar</button>
 		      </form>
-		    </div> <!--  end col -->
+		    </div> <!--  end col -->				
+				<div class="col-md-6">
+					<p><span class="contact-item">Morada:</span> CIES - Centro de Inovação Empresarial de Santarém, Largo Infante Santo. 2005-246 Santarém <br>
+					*De momento, qualquer assunto a tratar em Sede de Empresa está sujeito a marcação prévia.</p>
+					<br>
+					<p><span class="contact-item">Telemóvel:</span> 927710788 /918506990</p>
+					<br>
+					<p><span class="contact-item">E-mail: </span><span class="contact-reverse">tp.siballacsoeuqra@lareg</span> </p>				
+				</div>
 		  </div> <!-- end row -->
 		</div> <!-- end container -->
 		<br>
@@ -208,25 +211,27 @@
 												<!-- FAQ'S -->
 
 
-		<div class="container">
+		<div class="container" ng-controller="faqController">
 			<div class="scrollspy-offset" id="facs"></div>
 	    <div class="row">
 	    	<div class="col-md-12">
 		    	<h1>FAQ's</h1>
 		    	<br>
 		      <div class="panel-group" role="tablist" aria-multiselectable="true">
-		        <div class="panel panel-default">
-		          <div class="panel-heading" role="tab" id="question-one">
-		            <h4 class="panel-title">
-		              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#faq" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> <span class="glyphicon glyphicon-plus"></span> ArqueoScallabis?</a>
-		            </h4>
-		          </div><!--  end panel-heading -->
-		          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="question-one">
-		            <div class="panel-body">
-		              <p>Pois claro!</p>
-		            </div><!--  end panel-body -->
-		          </div><!--  end panel-collapse -->
-		        </div> <!-- end panel-default -->
+		        <div ng-repeat="faq in faqs">
+			        <div class="panel panel-default">
+			          <div class="panel-heading" role="tab" id="{{ faq.headId }}">
+			            <h4 class="panel-title">
+			              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#faq" href="#{{ faq.collapseId }}" aria-expanded="false" aria-controls="{{ faq.collapseId }}"> <span class="glyphicon glyphicon-plus"></span> {{ faq.question}}</a>
+			            </h4>
+			          </div><!--  end panel-heading -->
+			          <div id="{{ faq.collapseId }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{ faq.headId }}">
+			            <div class="panel-body">
+			              <p>{{ faq.answer }}</p>
+			            </div><!--  end panel-body -->
+			          </div><!--  end panel-collapse -->
+			        </div> <!-- end panel-default -->
+			      </div> <!-- end ng repeat -->
 		      </div> <!-- end panel-group -->
 		    </div> <!-- end col -->
 		  </div> <!-- end row -->	
@@ -236,9 +241,9 @@
 	    	<div class="col-md-12">
 	    	<h2>Links úteis</h2>
 		    	<ul class="other-links">
-		    		<li><a href="http://arqueologia.patrimoniocultural.pt/">Portal do Arqueólogo</a></li>
-		    		<li><a href="http://www.patrimoniocultural.gov.pt">Direção Geral do Património Cultural: DGPC</a></li>
-		    		<li><a href="https://dre.pt/">Diário da República Eletrónico</a></li>
+		    		<li><a href="http://arqueologia.patrimoniocultural.pt/" target="_blank">Portal do Arqueólogo</a></li>
+		    		<li><a href="http://www.patrimoniocultural.gov.pt" target="_blank">Direção Geral do Património Cultural: DGPC</a></li>
+		    		<li><a href="https://dre.pt/" target="_blank">Diário da República Eletrónico</a></li>
 		    	</ul>	    	
 	    	</div>
 	    </div>	<!-- end row -->			
@@ -349,6 +354,46 @@
 		      modalImage2: "img/Igreja_Santa_Iria_Ribeira_de_Santarem_Tabalhos.jpg",
 		      modalImage3: "img/Igreja_Santa_Iria_Ribeira_de_Santarem_Tabalhos_2.jpg"
 		    }
+		  ];
+		}]);
+		app.controller('faqController', ['$scope', function($scope) { 
+		  $scope.faqs = [
+		    {
+		    	headId: "head1",
+		    	collapseId: "collapse1",
+		    	question: "Quero trabalhar com a ArqueoScallabis. Posso fazer uma candidatura espontânea?",
+		    	answer: "Sim. Para efetuar uma candidatura espontânea basta enviar o CV para geral@arquosacallabis.com. Todas as candidaturas serão alvo da nossa maior atenção."
+		    },
+		    {
+		    	headId: "head2",
+		    	collapseId: "collapse2",
+		    	question: "Acabei agora a licenciatura em Arqueologia ou tenho pouca experiência na área. Posso enviar o meu CV?",
+		    	answer: "Claro! Na ArqueoScallabis valorizamos toda a experiência dos candidatos, na área da Arqueologia e não só. "
+		    },
+		    {
+		    	headId: "head3",
+		    	collapseId: "collapse3",
+		    	question: "Sou licenciado em Restauro ou Antropologia Biológica. Posso enviar o meu CV?",
+		    	answer: "Claro! A ArqueScallabis também desenvolve projeto na área do Restauro e áreas geográficas com grande probabilidade de aparecerem contextos onde a presença de um antropólogo é obrigatória."
+		    },
+		    {
+		    	headId: "head4",
+		    	collapseId: "collapse4",
+		    	question: "Tenho um projeto de construção para realizar. Preciso de serviços de Arqueologia?",
+		    	answer: "Depende. Se o projeto estiver inserido numa zona de grau 1 do PDM, se se encontrar perto de uma Zona de Proteção Especial (ZEP) ou se afetar um imóvel classificado ou em vias de classificação, poderão ser necessários trabalhos arqueológicos prévios ou de acompanhamento dos trabalhos de obra. Se o projeto não se enquadra em nenhuma das anteriores situações, os serviços de Arqueologia só serão necessários se a autarquia local ou a Direção Geral do Património Cultural (DGPC) o determinarem. Em caso de dúvida pode sempre entrar em contato connosco através do email geral@arquosacallabis.com."
+		    },
+		    {
+		    	headId: "head5",
+		    	collapseId: "collapse5",
+		    	question: "O que faz um arqueólogo em obra?",
+		    	answer: "O arqueólogo tem a função de identificar a presença de vestígios arqueológicos, registá-los e minimizar os impactos dos trabalhos de obra sobre os mesmos. Desta forma, tenta salvaguardar o possível interesse científico dos vestígios encontrados, ao mesmo tempo que assegura que os mesmos não interferem com o andamento dos trabalhos em execução."
+		    },
+		    {
+		    	headId: "head6",
+		    	collapseId: "collapse6",
+		    	question: "Quem tem a obrigação de pagar os serviços de Arqueologia, Restauro ou Antropologia, caso sejam necessários?",
+		    	answer: "Qualquer serviço que venha a ser fornecido pela ArqueoScallabis será pago pela entidade contratante do mesmo, isto é, o Dono de Obra ou a Entidade Promotora da mesma. O pagamento de serviços prestado por uma empresa de Arqueologia não é diferente do pagamento de serviços de Ambiente, Higiene e Segurança (HSST), Topografia, ou outros necessários ao bom funcionamento da empreitada."
+		    }		    		    		    		    
 		  ];
 		}]);
 		</script>
