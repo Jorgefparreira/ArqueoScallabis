@@ -1,0 +1,141 @@
+
+{"records":[
+  {
+    "link":"/#!/details/0#projects",
+    "name":"Posto de combustíveis de Chão da Feira",
+    "description": {
+      "title": "Acompanhamento arqueológico da construção do posto de abastecimento de combustíveis líquidos de Chão da Feira, Porto de Mós",
+      "partnership": "",
+      "client": "Cliente: Léguas e Destinos, Lda e Espiral Genial, Lda",
+      "text": "Acompanhamento arqueológico durante as fases com afectação ao solo. Não houveram ocorrências patrimoniais a registar, uma vez que o terreno já se encontrava profundamente alterado na sua estratigrafia original devido à construção em momentos anteriores de dois postos de abastecimento de combustíveis."
+    },
+    "coverImage":"img/chao-da-feira(1).jpg",
+    "projectImage1":"img/chao-da-feira(1).jpg",
+    "projectImage2":"img/chao-da-feira(2).jpg",
+    "projectImage3":"img/chao-da-feira(3).jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/details/1#projects",
+    "name":"Convento de St António da Convalescença",
+    "description": {
+      "title": "Levantamento patrimonial e arquitectónico do antigo Convento de Santo António da Convalescença, S. Domingos de Benfica, Lisboa",
+      "partnership": "",
+      "client": "Cliente: Succeed, Investimentos Imobiliários e Formação Profissional, SA",
+      "text": "Levantamento patrimonial e arquitectónico de todo o edifício e respectivas dependências, de construção original seiscentista, com recurso a fotografia e ortofotografia dos elementos patrimoniais e investigação histórica acerca. Destacam-se os painéis de azulejos dos Sécs. XVII e XVIII, bem como as bicas de água do Séc. XVI do tanque do antigo Convento. Estudo integrado no projecto de reabilitação do edifício para ser submetido à CM Lisboa e à DGPC."
+    },
+    "coverImage":"img/convento-st-antonio_1.jpg",
+    "projectImage1":"img/convento-st-antonio_3.jpg",
+    "projectImage2":"img/convento-st-antonio_2.jpg",
+    "projectImage3":"img/convento-st-antonio_1.jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/details/2#projects",
+    "name":"Central Fotovoltaica de Arronchais, Moura",
+    "description": {
+      "title": "Prospecção arqueológica para o EIA do projecto da Central Fotovoltaica de Arronchais, Moura",
+      "partnership": "",
+      "client": "Parceria: Emerita, Empresa Portuguesa de Arqueologia",
+      "text": "Prospecção sistemática na área de construção da central fotovoltaica e prospecção dirigida na linha aérea, destacando-se a identificação de diversos elementos etnográficos, bem como a relocalização de diversos sítios arqueológicos."
+    },
+    "coverImage":"img/central-fotovoltaica-moura_1.jpg",
+    "projectImage1":"img/central-fotovoltaica-moura_3.jpg",
+    "projectImage2":"img/central-fotovoltaica-moura_2.jpg",
+    "projectImage3":"img/central-fotovoltaica-moura_1.jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/details/3#projects",
+    "name":"Central Fotovoltaica de Encarnado",
+    "description": {
+      "title": "Prospecção arqueológica para o EIA do projecto da Central Fotovoltaica de Encarnado, Cartaxo e Santarém",
+      "partnership": "",
+      "client": "Parceria: Emerita, Empresa Portuguesa de Arqueologia",
+      "text": "Prospecção sistemática na área de construção da central fotovoltaica e respectiva linha aérea, destacando-se a relocalização de diversos elementos etnográficos, nomeadamente uma ponte vernacular, mina de água, columbário, tanque e depósito de água associados a um casal agrícola, bem como 3 fornos de cal de Época Moderna/Contemporânea."
+    },
+    "coverImage":"img/central-fotovoltaica-encarnado_1.jpg",
+    "projectImage1":"img/central-fotovoltaica-encarnado_3.jpg",
+    "projectImage2":"img/central-fotovoltaica-encarnado_2.jpg",
+    "projectImage3":"img/central-fotovoltaica-encarnado_1.jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/details/4#projects",
+    "name":"Rua dos Mártires da Pátria, Setúbal",
+    "description": {
+      "title": "Sondagens Arqueológicas na Rua dos Mártires da Pátria, Setúbal",
+      "partnership": "",
+      "client": "Cliente: D. Rosenberg",
+      "text": "Abertura de sondagens arqueológicas manuais de diagnóstico. Identificados vestígios modernos e contemporâneos dos quais se destacam uma base de forno e um conjunto de paredes."
+    },
+    "coverImage":"img/rua-dos-martires-da-patria_1.jpg",
+    "projectImage1":"img/rua-dos-martires-da-patria_3.jpg",
+    "projectImage2":"img/rua-dos-martires-da-patria_2.jpg",
+    "projectImage3":"img/rua-dos-martires-da-patria_1.jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/details/5#projects",
+    "name":"Travessa do Monteiro e a Rua Direita, Coruche",
+    "description": {
+      "title": "Sondagens Arqueológicas na construção de edifício multifamiliar no gaveto entre a Travessa do Monteiro e a Rua Direita, Coruche",
+      "partnership": "",
+      "client": "Cliente: Câmara Municipal de Coruche",
+      "text": "Abertura de sondagens arqueológicas manuais de diagnóstico. Identificados vestígios de Época Moderna, dos quais se destacam a descoberta de pavimento em lajetas de cerâmica, anteriores ao edifício que ali se localizava."
+    },
+    "coverImage":"img/travessa-monteiro-coruche_1.jpg",
+    "projectImage1":"img/travessa-monteiro-coruche_2.jpg",
+    "projectImage2":"img/travessa-monteiro-coruche_3.jpg",
+    "projectImage3":"img/travessa-monteiro-coruche_1.jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/details/6#projects",
+    "name":"Villa Romana de Rio Maior",
+    "description": {
+      "title": "Sondagens Arqueológicas na Villa Romana de Rio Maior (requalificação da frente ribeirinha)",
+      "partnership": "",
+      "client": "Cliente: Construbel, Engenharia Lda",
+      "text": "Abertura de sondagens arqueológicas manuais de salvaguarda. Identificados vestígios de Época Romana até à Época Contemporânea, dos quais se destacam a descoberta de pavimento em mosaico de tesselas, 7 numismas do Imperador Galiano e um fragmento de fíbula."
+    },
+    "coverImage":"img/villa-rio-maior_1.jpg",
+    "projectImage1":"img/villa-rio-maior_2.jpg",
+    "projectImage2":"img/villa-rio-maior_3.jpg",
+    "projectImage3":"img/villa-rio-maior_1.jpg",
+    "alentejo2020": false
+  }, 
+  {
+    "link":"/#!/archive",
+    "name":"",
+    "description": {
+      "title": "",
+      "partnership": "",
+      "client": "",
+      "text": ""
+    },
+    "coverImage":"img/archive-thumb.jpg",
+    "projectImage1":"",
+    "projectImage2":"",
+    "projectImage3":"",
+    "alentejo2020": ""
+  }, 
+  {
+    "link":"/#!/details/8#projects",
+    "name":"Rua 1º de Dezembro, Santarém",
+    "description": {
+      "title": "Trabalhos arqueológicos na reabilitação de edifício na R. 1º de Dezembro, Santarém",
+      "partnership": "",
+      "client": "Cliente: Craftrade, Sociedade de representações e investimentos imobiliários, Lda",
+      "text": "Sondagens arqueológicas de diagnóstico e acompanhamento das fases de picagem de paredes e de abertura de valas para infraestruturas. Destaca-se a descoberta de uma porta ogival de época medieval, que será reabilitada e restituída à sua função original de acesso ao edifício, mas também um depósito de materiais arqueológicos cerâmicos inteiros, de época Moderna, entre paredes e que possibilitaram a identificação dos proprietários do imóvel no Séc. XVII. Estes materiais vão ficar em exposição após a reabilitação, que irá dar origem a um estabelecimento hoteleiro."
+    },
+    "coverImage":"img/rua-1-dezembro-santarem_1.jpg",
+    "projectImage1":"img/rua-1-dezembro-santarem_1.jpg",
+    "projectImage2":"img/rua-1-dezembro-santarem_3.jpg",
+    "projectImage3":"img/rua-1-dezembro-santarem_4.jpg",
+    "alentejo2020": false
+  }       
+]}
+
+
+

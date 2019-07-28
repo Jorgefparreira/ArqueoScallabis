@@ -1,0 +1,46 @@
+<div class="scrollspy-offset" id="projects"></div>
+<div class="hr-details">
+  <hr>
+</div>
+<div class="projects-return" ng-mouseenter="swing = 'swing-ani'" ng-mouseleave="swing = ''">
+	<a href="#projects"><h3><span class="{{swing}}">&laquo;</span> Projectos</h3></a>
+</div>
+
+<br>
+
+<div class="container" id="archive">
+	<section >
+	  <div ng-model="projects">
+<!-- 	    <h1 class="project-title">{{projects[whichItem].name}}</h1> -->
+	    <br>
+	    <div class="row">
+	      <div class="col-sm-6">
+			<h3>{{projects[whichItem].description.title}}</h3><br>
+			<p class="project-partnership"><strong>{{projects[whichItem].description.partnership}}</strong></p>
+			<li>{{projects[whichItem].description.client}}</li><br>
+			<p>{{projects[whichItem].description.text}}</p>
+	      </div>
+	      <div class="col-sm-6 projectImage1">
+					<img ng-src="{{ projects[whichItem].projectImage1 }}" class="img-responsive  modal-img">
+				</div>
+	      <div class="col-sm-6 projectImage2">
+					<img ng-src="{{ projects[whichItem].projectImage2 }}" class="img-responsive  modal-img">
+				</div>
+	      <div class="col-sm-6 projectImage3">
+					<img ng-src="{{ projects[whichItem].projectImage3 }}" class="img-responsive  modal-img">
+				</div>
+	      <div class="col-sm-6 projectImage4">
+					<img ng-src="{{ projects[whichItem].projectImage4 }}" class="img-responsive  modal-img">
+				</div>												
+	      <div class="col-md-6">
+					<img ng-src="{{ projects[whichItem].projectImage5 }}" class="img-responsive  modal-img">
+				</div>
+	      <div class="col-md-6">
+					<img ng-src="{{ projects[whichItem].projectImage6 }}" class="img-responsive  modal-img">
+				</div>								
+			</div>
+	  </div>
+	  <a href="#projects"><p>&laquo; Voltar</p>	</a>
+	</section>
+</div>
+<div class="scrollspy-offset" id="contact"></div>

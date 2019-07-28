@@ -1,0 +1,19 @@
+<div class="scrollspy-offset" id="projects"></div>
+<hr>
+<br>
+<div class="container" >
+	<div class="project-margin"></div>
+	<section class="ang-list">												
+		<div class="row">
+			<h1 class="project-title">Projectos</h1>
+			<br>
+			<div class="owl-carousel owl-theme">
+				<div ng-repeat="project in projects">
+						<div class="project-box"><h3 class="list-title">{{project.name}}</h3><a ng-href="{{project.link}}"><img type="button" ng-src="{{project.coverImage}}" class="img-responsive project-img"></a></div>					
+				</div>
+
+			</div>			
+		</div> <!-- end row -->
+	</section>
+</div> <!-- end container -->
+<div id="contact" class="scrollspy-offset"></div>
