@@ -154,6 +154,15 @@ hr:after {
   -o-animation: ini-roll 2s 3s;
   animation: ini-roll 2s 3s; }
 
+.navbar-brand2:hover .brand-img{
+  animation: brand-roll 2s;
+}  
+
+#contactus-form input:focus,
+#contactus-form textarea:focus {
+  background-color: #e8eff9;
+}
+
 .nav li {
   background-color: #fff; }
 

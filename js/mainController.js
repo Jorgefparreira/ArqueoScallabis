@@ -1,6 +1,6 @@
 var projectControllers = angular.module('projectControllers', []);
-var faqControllers = angular.module('faqControllers', ['ngAnimate', 'ngTouch', 'ui.bootstrap']);
-var carouselController = angular.module('carouselController', ['ngAnimate', 'ngTouch', 'ui.bootstrap']);
+var faqControllers = angular.module('faqControllers', ['ngAnimate', 'ui.bootstrap']);
+var carouselController = angular.module('carouselController', ['ngAnimate', 'ui.bootstrap']);
 
 carouselController.controller('carouselController', function($scope, $http) {	 
 	$scope.slideData = [

@@ -12,7 +12,7 @@ function initMap() {
   });
 }
 
-$(document).ready(function(){
+window.addEventListener('load', function(event) {
 	//scrollspy
 	$('body').scrollspy({target: ".scrollspy"});
 
@@ -33,57 +33,35 @@ $(document).ready(function(){
 	  } 
 	});
 
-  //textarea color
-  $("#name, #phone, #email").on({  	
-    focus: function(){
-      $(this).css("background-color", "#e8eff9");
-  	},
-    focusout: function(){
-      $(this).css("background-color", "white");
-  	},
-	});			  
+  // CAROUSEL
+
+  $('.owl-carousel').owlCarousel({
+      center: true,
+      loop:true,
+      margin:10,
+      responsiveClass:true,
+      autoplay:true,
+      autoplayTimeout:3000,
+      animateOut: 'slideOutDown',
+      animateIn: 'flipInX',
+      mergeFit:false,
+      merge:true,
+      autoplayHoverPause:true,
+
+      responsive:{
+          0:{
+              items:2,
+              autoplay:false,
+              autoplayTimeout:10000000,            
+          },
+          600:{
+              items:2,
+          },
+          1000:{
+              items:3,
+          }
+      }
+  })  		  
   
 });
 
-  //animations
-
-  $('.navbar-brand2').hover(function() {
-      $('.brand-img').css('animation', 'brand-roll 2s');
-    }, function() {  
-      $('.brand-img').css('animation', 'none');
-    })
-
-// jQuery("#gallery").unitegallery({
-//   tiles_type:"nested"
-// });
-
-
-$(document).ready(function(){
-$('.owl-carousel').owlCarousel({
-    center: true,
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    autoplay:true,
-    autoplayTimeout:3000,
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
-    mergeFit:false,
-    merge:true,
-    autoplayHoverPause:true,
-
-    responsive:{
-        0:{
-            items:2,
-            autoplay:false,
-            autoplayTimeout:10000000,            
-        },
-        600:{
-            items:2,
-        },
-        1000:{
-            items:3,
-        }
-    }
-})
-});
