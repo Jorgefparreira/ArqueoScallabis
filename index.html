@@ -18,7 +18,7 @@
 	<meta name="description"
 		content="A ArqueoScallabis é uma empresa no ramo da Arqueologia, salvaguarda e gestão patrimonial, que nasceu da vontade de um grupo de profissionais, todos formados em Arqueologia e História pela Faculdade de Letras de Lisboa, e com um percurso consolidado na área, através dos mais diversos trabalhos, em vários pontos do País.">
 	<meta name="author" content="Web Archaeologist">
-	<meta property="og:image" content="http://www.arqueoscallabis.pt/img/logo.png">
+	<meta property="og:image" content="http://www.arqueoscallabis.pt//img/logo.png">
 
 	<!-- angular.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
@@ -34,10 +34,10 @@
 		integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
 		crossorigin="anonymous"></script> <!-- Awesome font -->
 	<!-- custom styles -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/styles.css?v=1.3">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/css/styles.css?v=1.5">
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<title>ArqueoScallabis</title>
 </head>
@@ -53,19 +53,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#home"><img class="img-responsive" src="img/logo.png" alt="logo"><span
-						class="hidden-sm">ArqueoScallabis</span></a>
+				<div onclick="scrollToSection('home')" class="navbar-brand" id="home-link"><img class="img-responsive" src="/img/logo.png" alt="logo"><span
+						class="hidden-sm">ArqueoScallabis</span></div>
 			</div> 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="#projects">Projectos</a></li>
-					<li><a href="#contact">Contactos</a></li>
-					<li><a href="#facs">FAQ's</a></li>
-					<li class="alentejo-link"><a href="/clientes.html">Clientes</a></li>
+					<li onclick="scrollToSection('projects')" id="projects-link"><span>Projectos</li>
+					<li onclick="scrollToSection('contact')" id="contact-link"><span>Contactos</li>
+					<li onclick="scrollToSection('faqs')" id="faqs-link"><span>FAQ's</li>
+					<li class="alentejo-link"><a href="/clientes">Clientes</a></li>
 				</ul>
 			</div> 
 			<div class="navbar-brand2 mobile-brand">
-				<a href="#"><img src="img/brand.png" class="brand-img" alt="Trowel"></a>
+				<a href="#"><img src="/img/brand.png" class="brand-img" alt="Trowel"></a>
 			</div>
 
 		</div> 
@@ -80,16 +80,16 @@
 		<div id="intro-carousel" class="carousel slide" data-ride="carousel">
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="img/header0.jpg" alt="church 1">
+					<img src="/img/header0.jpg" alt="Igreja de Santarém 1">
 				</div>
 				<div class="item">
-					<img src="img/header1.jpg" alt="church 2">
+					<img src="/img/header1.jpg" alt="Igreja de Santarém 2">
 				</div>
 				<div class="item">
-					<img src="img/header2.jpg" alt="church 3">
+					<img src="/img/header2.jpg" alt="Igreja de Santarém 3">
 				</div>
-			</div> <!-- end carousel-inner -->
-		</div> <!-- end carousel -->
+			</div> 
+		</div>
 	</div> 
 	<div class="container">
 		<div class="row">
@@ -97,7 +97,7 @@
 				<h2>Quem Somos</h2>
 			</div>
 			<div class="col-md-4">
-				<img src="img/QuemSomos.jpg" alt="Child running" class="img-responsive text-img">
+				<img src="/img/QuemSomos.jpg" alt="Criança a correr" class="img-responsive text-img">
 			</div>
 			<div class="col-md-8">
 				<p>A ArqueoScallabis é uma empresa no ramo da Arqueologia, salvaguarda e gestão patrimonial, que nasceu da
@@ -109,7 +109,7 @@
 					arqueológica para ser concluído com sucesso.
 				</p>
 			</div>
-		</div> <!-- end row -->
+		</div> 
 		<br>
 		<div class="row">
 			<div class="col-md-6">
@@ -125,7 +125,7 @@
 					soluções de qualidade adaptadas aos seus projectos.
 				</p>
 			</div>
-		</div> <!-- end row -->
+		</div> 
 		<br>
 		<div class="row">
 			<div class="col-md-6">
@@ -143,7 +143,7 @@
 					Musealização de espaços; <br>
 					Serviços Educativos;</p>
 			</div>
-		</div> <!-- end row -->
+		</div> 
 
 	</div> 
 
@@ -198,7 +198,7 @@
 					<button type="submit" value="Send" class="btn btn-primary submit-btn" id="submit-button"><i
 							class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button>
 				</form>
-			</div> <!--  end col -->
+			</div> 
 			<br>
 			<div class="col-md-6">
 				<p><span class="contact-item">Morada:</span> CIES - Centro de Inovação Empresarial de Santarém, Largo Infante
@@ -211,14 +211,14 @@
 					<script> var username = "geral"; var hostname = "arqueoscallabis.pt"; var linktext = username + "@" + hostname; document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>"); </script>
 				</p>
 			</div>
-		</div> <!-- end row -->
+		</div> 
 	</div> 
 
 
 	<!-- FAQ'S -->
 
 
-	<div class="scrollspy-offset" id="facs"></div>
+	<div class="scrollspy-offset" id="faqs"></div>
 	<hr>
 	<br>
 	<div class="container" ng-controller="faqController">
@@ -244,8 +244,8 @@
 						<p>{{faq.answer}}</p>
 					</div>
 				</uib-accordion>
-			</div> <!-- end col -->
-		</div> <!-- end row -->
+			</div>
+		</div> 
 		<br>
 		<br>
 		<div class="row">
@@ -258,7 +258,7 @@
 					<li><a href="https://dre.pt/" target="_blank">Diário da República Eletrónico</a></li>
 				</ul>
 			</div>
-		</div> <!-- end row -->
+		</div> 
 	</div> 
 
 
@@ -268,7 +268,7 @@
 	<footer>
 		<div class="container-fluid">
 			<div class="row footer-row">
-				<a href="ficha_projeto.pdf"><img src="img/feder_logo.png" class="img-responsive feder-logo"
+				<a href="ficha_projeto.pdf"><img src="/img/feder_logo.png" class="img-responsive feder-logo"
 						alt="FEDER Logo"></a>
 				<div class="clearfix"></div>
 				<div class="social">
@@ -297,7 +297,7 @@
 	<!-- Bootstrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/scripts.js?v=1.1"></script>
+	<script src="js/scripts.js?v=1.2"></script>
 
 	<!-- google maps api -->
 

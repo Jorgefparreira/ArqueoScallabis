@@ -69,7 +69,8 @@ h1,
 h2,
 h3 {
   color: #3d3d3d;
-  font-weight: bold; }
+  font-weight: bold; 
+}
 
 h1,
 h3 {
@@ -129,7 +130,11 @@ hr:after {
   margin-right: 20px;
   padding: 0;
   display: inline-block;
-  font-size: 3em; }
+  font-size: 3em; 
+  color: #3d3d3d;
+  font-weight: bold; 
+  cursor: pointer;
+}
 
 .navbar-brand img {
   padding: 0 10px;
@@ -169,11 +174,15 @@ hr:after {
 .nav li:hover {
   background-color: #ddd; }
 
-.navbar-nav > li > a {
+.navbar-nav > li > a,
+.navbar-nav > li > span {
   padding: 25px 0;
   text-align: center;
   color: #3d3d3d !important;
-  font-weight: bold; }
+  font-weight: bold;
+  display: grid;
+  cursor: pointer;
+}
 
 .navbar-default .navbar-toggle,
 .navbar-default .navbar-toggle:focus,
@@ -378,6 +387,10 @@ hr:after {
   padding-left: 20px;
   margin-bottom: 5px;
   font-size: 15px;
+}
+
+.client-cap {
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
