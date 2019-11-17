@@ -187,6 +187,7 @@ hr:after {
   background-color: #8c8c8c;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  cursor: pointer;
 
   h3 {
     margin: 0;
@@ -331,28 +332,56 @@ hr:after {
     background-color: #d18712 !important;
     border-color: #e59a24;
   }
+
+  svg{
+    position: relative;
+    top: 3px;
+    right: 2px;    
+  }
 }
 
 /*** FAQ's ***/
-.panel-group .panel + .panel {
+
+.faq-wrapper{
   margin-top: 2px;
+
+  .faq-header{
+    border-color: #ddd;
+    background-color: #3d3d3d;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;    
+    cursor: pointer;
+
+    p{
+      color: #ababab;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 40px 10px 15px;
+      margin: 0;
+      position: relative;
+      pointer-events: none;
+
+      svg{
+        height: 20px;
+        position: absolute;
+        right: 16px;
+        top: 11px;
+
+        path{
+          stroke: #ababab
+        }
+      }
+    }
+  }
+
+  .faq-body{
+    border-top: 1px solid #ddd;
+    background-color: #c9c9c9;
+    padding: 15px;
+    display: none;
+  }
 }
 
-.panel-heading {
-  background-color: #3d3d3d !important;
-}
-
-.panel-heading a {
-  color: #ababab;
-}
-
-.panel-heading a:hover {
-  color: #dbd9d9;
-}
-
-.panel-body {
-  background-color: #c9c9c9;
-}
 
 .other-links {
   li {

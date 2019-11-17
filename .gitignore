@@ -2,8 +2,8 @@
 /node_modules
 /.sass-cache
 /dev
-/src/php
+/public/php
 .git
 /build
+/public/js/lib
 /src/courtesy.html
-.htaccess
