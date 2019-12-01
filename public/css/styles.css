@@ -69,10 +69,12 @@ h3 {
   color: #3d3d3d;
   font-weight: bold; }
 
-a:hover, a:active {
-  cursor: pointer;
-  text-decoration: none;
-  color: #ababab; }
+a {
+  display: inline-block; }
+  a:hover, a:active {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ababab; }
 
 h1,
 h3 {
@@ -159,13 +161,15 @@ hr:after {
     #top-navbar .nav li:hover {
       background-color: #ddd; }
   #top-navbar li > a,
-  #top-navbar li > span {
+  #top-navbar .navbar-collapse li {
     padding: 25px 0;
     text-align: center;
     color: #3d3d3d !important;
     font-weight: bold;
     display: grid;
     cursor: pointer; }
+  #top-navbar .navbar-nav > li > a {
+    padding: 0; }
   #top-navbar .navbar-toggle,
   #top-navbar .navbar-toggle:focus,
   #top-navbar .navbar-toggle:hover {
@@ -175,6 +179,8 @@ hr:after {
 .carousel-container {
   padding: 0;
   margin-bottom: 20px; }
+  .carousel-container h1 {
+    display: none; }
   .carousel-container #intro-carousel {
     margin-top: 60px; }
   .carousel-container .item img {
@@ -192,14 +198,16 @@ hr:after {
   content: none; }
 
 .projects-return {
-  height: 35px;
-  width: 160px;
-  margin: 0 auto;
-  background-color: #8c8c8c;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  cursor: pointer; }
+  display: flex;
+  justify-content: center; }
   .projects-return h3 {
+    height: 35px;
+    width: 160px;
+    margin: 0 auto;
+    background-color: #8c8c8c;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
     margin: 0;
     padding: 2px 0;
     color: #f9f6f2; }
@@ -214,7 +222,9 @@ hr:after {
 
 .project-title {
   margin: 0;
-  margin-top: 10px; }
+  margin-top: 10px;
+  text-align: center;
+  font-size: 36px; }
 
 .list-title {
   height: 52px;
@@ -357,6 +367,9 @@ hr:after {
   font-size: 1.3em; }
 
 /*** CLIENTES ***/
+#router-container {
+  padding-top: 25px; }
+
 .clientes-list li {
   margin-bottom: 10px;
   font-size: 18px; }
@@ -422,9 +435,9 @@ footer {
 
 @media (max-width: 767px) {
   .brand-img {
-    right: 70px; }
+    right: 70px !important; }
   .navbar-brand {
-    font-size: 1.5em; } }
+    font-size: 1.5em !important; } }
 
 @media (min-width: 767px) {
   .nav li {
@@ -447,8 +460,8 @@ footer {
 
 @media (max-width: 330px) {
   .navbar-brand {
-    font-size: 1.2em; } }
+    font-size: 1.2em !important; } }
 
-@media (max-width: 375px) {
+@media (max-width: 374px) {
   .brand-img {
     display: none; } }

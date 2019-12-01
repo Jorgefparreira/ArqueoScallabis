@@ -11,7 +11,7 @@ const babel = require('gulp-babel');
 
 // INDEX PAGE
 
-const htmlConcatIndex = (cb) => {
+const concatHTML = (cb) => {
   return gulp.src(['./src/components/html/header.html','./src/pages/index.html','./src/components/html/footer.html'])
     .pipe(concat('index.html'))
     .pipe(gulp.dest('./public/'))
@@ -20,22 +20,34 @@ const htmlConcatIndex = (cb) => {
 }
 
 const jsConcatJs = (cb) => {
-  return gulp.src(['./src/components/js/projectList.js','./src/components/js/indexFunctions.js'])
+  return gulp.src([
+    './src/components/js/projectList.js',
+    './src/components/js/faqList.js',
+    './src/components/js/projectsSection.js',
+    './src/components/js/indexFunctions.js',
+    './src/components/js/contactUsScript.js',
+    './src/components/js/router.js'
+    ])
     .pipe(concat('index.js'))
     .pipe(gulp.dest('./public/js/'))
     .pipe(connect.reload());
   cb();
 }
 
-// CLIENTES PAGE
+// const moveRouter = (cb) => {
+//   return gulp.src('./src/components/js/router.js')
+//     .pipe(gulp.dest('./public/js/'))
+//     .pipe(connect.reload());
+//   cb();
+// }
 
-const htmlConcatClientes = (cb) => {
-  return gulp.src(['./src/components/html/header.html','./src/pages/clientes.html','./src/components/html/footer.html'])
-    .pipe(concat('clientes.html'))
-    .pipe(gulp.dest('./public/'))
+const movePages = (cb) => {
+  return gulp.src('./src/pages/*.js')
+    .pipe(gulp.dest('./public/js/'))
     .pipe(connect.reload());
   cb();
 }
+
 
 const serverConnect = (cb) => {
   connect.server({
@@ -58,10 +70,10 @@ const sassDev = (cb) => {
 function watchFiles() {
   gulp.watch('src/scss/*.scss', sassDev);
   gulp.watch('src/components/js/*.js', jsConcatJs);
-  gulp.watch('src/pages/index.html', htmlConcatIndex);
-  gulp.watch('src/components/html/footer.html', htmlConcatIndex);
-  gulp.watch('src/pages/clientes.html', htmlConcatClientes);
-  gulp.watch('src/components/html/header.html', htmlConcatClientes);  
+  gulp.watch('src/pages/index.html', concatHTML);
+  gulp.watch('src/components/html/*.html', concatHTML);
+  gulp.watch('src/pages/*.js', movePages);
+  // gulp.watch('src/components/js/router.js', moveRouter); 
 }
 
 exports.default = gulp.parallel(watchFiles, serverConnect);

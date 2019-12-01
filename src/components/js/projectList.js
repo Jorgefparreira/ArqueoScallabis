@@ -70,7 +70,7 @@ let projectList = [
       "images": ["img/villa-rio-maior_2.jpg","img/villa-rio-maior_3.jpg","img/villa-rio-maior_1.jpg"]
     },
     {
-      "id": "",
+      "id": "arquivo",
       "name": "",
       "title": "",
       "partnership": "",
@@ -89,4 +89,105 @@ let projectList = [
       "coverImage": "img/rua-1-dezembro-santarem_1.jpg",
       "images": ["img/rua-1-dezembro-santarem_1.jpg","img/rua-1-dezembro-santarem_3.jpg","img/rua-1-dezembro-santarem_4.jpg"]
     }
+  ];
+
+  let archiveList = [
+    {
+      "id":"0",
+      "name":"Encosta de Santa Margarida, Santarém",
+      "description": {
+        "title": "Projecto Global de Estabilização e Consolidação das Encostas de Santarém, Santarém",
+        "partnership": "Parceria: Emerita, Empresa Portuguesa de Arqueologia, Lda.",
+        "client": "Cliente: Ancorpor, Geotécnica e fundações, Lda. ",
+        "text": "Prospecção, abertura de sondagens manuais e mecânicas e  acompanhamento arqueológico para salvaguarda de eventuais vestígios patrimoniais e arqueológicos. Identificados vestígios medievais, modernos e contemporâneos e vestígios osteológicos associados à Igreja de São Mateus."
+      },
+      "coverImage":"img/Encosta_Sta_Margarida_1.jpg",
+      "projectImage1":"img/Encosta_Sta_Margarida_1.jpg",    
+      "projectImage2":"img/Encosta_Sta_Margarida_2.jpg",
+      "projectImage3":"img/Encosta_Sta_Margarida_4.jpg"  
+    },
+    {
+      "id":"1",
+      "name":"Rua da Cruz de Santa Apolónia, Lisboa",
+      "description": {
+        "title": "Reabilitação do edifício na Rua da Cruz de Santa Apolónia, Lisboa",
+        "partnership": "",
+        "client": "Cliente: Inês Brandão Arquitetura",
+        "text": "Parecer técnico de arqueologia e abertura de sondagens arqueológicas manuais de diagnóstico. Identificados vestígios modernos e contemporâneos, um espaço de calçada e um caneiro possivelmente pombalino."
+      },
+      "coverImage":"img/Rua_da_Cruz_1.jpg",
+      "projectImage1":"img/Rua_da_Cruz_1.jpg",
+      "projectImage2":"img/Rua_da_Cruz_2.jpg",
+      "projectImage3":"img/Rua_da_Cruz_4.jpg"            
+    },
+    {
+      "id":"2",
+      "name":"Forte de São Filipe, Setúbal",
+      "description": {
+        "title": "Projecto de Estabilização e Consolidação das Barreiras do Forte de S. Filipe, Setúbal",
+        "partnership": "",
+        "client": "Clientes: Ancorpor, Geotecnia e fundações, Lda",
+        "text": "Prospecção, abertura de sondagens manuais e mecânicas e acompanhamento arqueológico para salvaguarda de eventuais vestígios patrimoniais e arqueológicos. Identificados vestígios modernos e contemporâneos, assim como estruturas de suporte estrutural do forte."
+      },
+      "coverImage":"img/Forte_Sao_Filipe_Setubal_1.jpg",
+      "projectImage1":"img/Forte_Sao_Filipe_Setubal_1.jpg",
+      "projectImage2":"img/Forte_Sao_Filipe_Setubal_2.jpg",
+      "projectImage3":"img/Forte_Sao_Filipe_Setubal_3.jpg"            
+    },   
+    {
+      "id":"3",
+      "name":"Avenida 5 de Outubro, Santarém",
+      "description": {
+        "title": "Reabilitação do edifício n.º 30 da Avenida 5 De Outubro, Santarém",
+        "partnership": "",
+        "client": "Cliente: Craftrade Lda",
+        "text": "Abertura de sondagens arqueológicas manuais de diagnóstico. Identificados vestígios modernos e contemporâneos e construções anteriores ao edificio actual, possivelmente contemporaneas."
+      },
+      "coverImage":"img/Avenida_5_de_Outubro_Santarem_1.jpg",
+      "projectImage1":"img/Avenida_5_de_Outubro_Santarem_1.jpg",
+      "projectImage2":"img/Avenida_5_de_Outubro_Santarem_2.jpg",
+      "projectImage3":"img/Avenida_5_de_Outubro_Santarem_3.jpg"
+    },
+    {
+      "id":"4",
+      "name":"ETAR de Ortiga, Mação",
+      "description": {
+        "title": "Empreitada de Concepção-Construção da ETAR de Ortiga, Mação",
+        "partnership": "",
+        "client": "Clientes: Ambiágua, Sa. ",
+        "text": "Acompanhamento arqueológico para salvaguarda de eventuais vestígios patrimoniais e arqueológicos."
+      },
+      "coverImage":"img/ETAR_Ortiga_2.jpg",
+      "projectImage1":"img/ETAR_Ortiga_1.jpg",
+      "projectImage2":"img/ETAR_Ortiga_2.jpg",
+      "projectImage3":"img/ETAR_Ortiga_3.jpg"
+    },
+    {
+      "id":"5",
+      "name":"Lg. de Nossa Senhora de Montelavar, Sintra",
+      "description": {
+        "title": "Reconstrução de edifício no Largo da Igreja de Montelavar, Sintra",
+        "partnership": "",
+        "client": "Cliente: Esquissos, Arquitetura e Consultoria ",
+        "text": "Abertura de sondagens arqueológicas manuais de diagnóstico. Vestígios modernos e contemporâneos e vestígios osteológicos associados a duas sepulturas de cronologia possivelmente moderna."
+      },
+      "coverImage":"img/Montelavar_1.jpg",
+      "projectImage1":"img/Montelavar_1.jpg",
+      "projectImage2":"img/Montelavar_2.jpg",
+      "projectImage3":"img/Montelavar_3.jpg"
+    },
+    {
+      "id":"6",
+      "name":"Rua dos Navegantes, Cascais",
+      "description": {
+        "title": "Reabilitação de edifício na Rua dos Navegantes, Cascais",
+        "partnership": "",
+        "client": "Cliente: Esquissos, Arquitetura e Consultadoria",
+        "text": "Abertura de sondagens arqueológicas manuais de diagnóstico. Vestígios de época moderna e romana."
+      },
+      "coverImage":"img/Navegantes_3.jpg",
+      "projectImage1":"img/Navegantes_2.jpg",
+      "projectImage2":"img/Navegantes_3.jpg",
+      "projectImage3":"img/Navegantes_4.jpg"
+    }     
   ]

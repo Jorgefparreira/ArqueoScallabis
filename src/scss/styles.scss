@@ -18,6 +18,7 @@ h3 {
 }
 
 a{
+  display: inline-block;
 &:hover,
 &:active {
   cursor: pointer;
@@ -64,10 +65,8 @@ hr:after {
   height: 52px;
 }
 
+
 /*** NAVBAR ***/
-
-
-
 
 #top-navbar{
     width: 100%;
@@ -132,13 +131,17 @@ hr:after {
   }
   
   li > a,
-  li > span {
+  .navbar-collapse li {
     padding: 25px 0;
     text-align: center;
     color: #3d3d3d !important;
     font-weight: bold;
     display: grid;
     cursor: pointer;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
   }
   
   .navbar-toggle,
@@ -154,6 +157,10 @@ hr:after {
 .carousel-container {
   padding: 0;
   margin-bottom: 20px;
+
+  h1 {
+    display: none;
+  }
 
   #intro-carousel {
     margin-top: 60px;
@@ -181,15 +188,17 @@ hr:after {
 }
 
 .projects-return {
-  height: 35px;
-  width: 160px;
-  margin: 0 auto;
-  background-color: #8c8c8c;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   h3 {
+    height: 35px;
+    width: 160px;
+    margin: 0 auto;
+    background-color: #8c8c8c;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;    
     margin: 0;
     padding: 2px 0;
     color: #f9f6f2;
@@ -204,6 +213,8 @@ hr:after {
 .project-title {
   margin: 0;
   margin-top: 10px;
+  text-align: center;
+  font-size: 36px;
 }
 
 .list-title {
@@ -395,6 +406,10 @@ hr:after {
 
 /*** CLIENTES ***/
 
+#router-container{
+  padding-top: 25px;
+}
+
 .clientes-list li {
   margin-bottom: 10px;
   font-size: 18px;
@@ -477,10 +492,10 @@ footer {
 
 @media (max-width: 767px) {
   .brand-img {
-    right: 70px;
+    right: 70px !important;
   }
   .navbar-brand {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
 }
 
@@ -517,11 +532,11 @@ footer {
 
 @media (max-width: 330px) {
   .navbar-brand {
-    font-size: 1.2em;
+    font-size: 1.2em !important;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 374px) {
   .brand-img {
     display: none;
   }
