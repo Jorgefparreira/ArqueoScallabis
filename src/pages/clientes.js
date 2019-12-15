@@ -12,7 +12,7 @@ let clientes = {
   
       <h2 class="h3">Clientes Empresariais:</h2>
       <div class="clearfix">&nbsp;</div>
-      <ul>
+      <ul> 
         <li><span class="client-cap">Ecoedifica, Ambiente e construções, S.a. </span><span class="cli-indent">- Casa
             Mortuária da Igreja de Santa Iria da Ribeira de Santarém</span></li>
   

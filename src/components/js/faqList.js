@@ -6,3 +6,5 @@ let faqList = [
   ['O que faz um arqueólogo em obra?', 'O arqueólogo tem a função de identificar a presença de vestígios arqueológicos, registá-los e minimizar os impactos dos trabalhos de obra sobre os mesmos. Desta forma, tenta salvaguardar o possível interesse científico dos vestígios encontrados, ao mesmo tempo que assegura que os mesmos não interferem com o andamento dos trabalhos em execução.'],
   ['Quem tem a obrigação de pagar os serviços de Arqueologia, Restauro ou Antropologia, caso sejam necessários?', 'Qualquer serviço que venha a ser fornecido pela ArqueoScallabis será pago pela entidade contratante do mesmo, isto é, o Dono de Obra ou a Entidade Promotora da mesma. O pagamento de serviços prestado por uma empresa de Arqueologia não é diferente do pagamento de serviços de Ambiente, Higiene e Segurança (HSST), Topografia, ou outros necessários ao bom funcionamento da empreitada.']
 ] 
+
+module.exports = faqList;

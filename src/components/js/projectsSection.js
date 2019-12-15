@@ -1,15 +1,20 @@
+import { projectList, archiveList } from './projectList';
+import router from './router';
+
 let projects = {
   loadList: () => {
+    let projectsHTML = '';
     projectList.forEach(project => {
-      $("#projects-carousel").append(
+      projectsHTML +=
         `<div class='project-box'>
           <h3 class='list-title'>${project.name}</h3>
-          <a href='/projects/${project.id}' class='page-link'>
+          <a href='${project.link}' class='page-link'>
             <img type='button' src='/${project.coverImage}' class='img-responsive project-img'>
           </a>
-        </div>
-      `);
-    }); 
+        </div>`
+    });  
+    return projectsHTML  
+
   },
   returnList: () => {
     document.querySelector("#project-details").innerHTML = "";
@@ -23,7 +28,7 @@ let projects = {
       images.forEach(image => {
         projectImages += `<div class="col-sm-6"><img src="/${image}" class="img-responsive modal-img"></div>`;
       });  
-      document.querySelector("#project-details").innerHTML = `
+      let projectHTML = `
         <a href="/#projectos" class="page-link projects-return"><h3><span>&laquo;</span> Projectos</h3></a>
         <br>
         <div class="container">
@@ -39,18 +44,18 @@ let projects = {
           <a href="#projects"><p>&laquo; Voltar</p></a>
         </div>
       `;
-      router.loadLinkEvents()
+      router.loadSection(projectHTML,'#project-details')
   },
   loadArchive: () => {
     document.querySelector("#project-container").style.display = "none";
     let archiveProjectsHTML = '';
     archiveList.forEach(project => {
       archiveProjectsHTML += `<div class="col-md-4">
-      <div class="project-box"><h3 class="list-title">${project.name}</h3><a ng-href="/#!/archive/details/{{project.id}}#projects"><img src="${project.coverImage}" class="img-responsive project-img"></a></div>	
+      <div class="project-box"><h3 class="list-title">${project.name}</h3><a href="/arquivo/${project.id}"><img src="/${project.coverImage}" class="img-responsive project-img"></a></div>	
     </div>`
     });
 
-    document.querySelector("#project-details").innerHTML = `
+    let archiveHTML = `
       <div class="projects-return" onclick="projects.returnList()"><h3><span class="{{swing}}">&laquo;</span> Projectos</h3></div>
       <br>
       <div class="container">
@@ -61,6 +66,13 @@ let projects = {
         </div>
         <a href="#projects"><p>&laquo; Voltar</p></a>
       </div>
-    `;    
+    `; 
+    router.updateHead("arquivo", "Arquivo", "Arquivo de projectos");
+    router.loadSection(archiveHTML,'#project-details') 
   }
+
 };
+
+
+
+export default projects;

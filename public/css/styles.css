@@ -2,57 +2,41 @@
 @keyframes bounce {
   50% {
     -webkit-transform: translateY(5px);
-    -moz-transform: translateY(5px);
     -ms-transform: translateY(5px);
-    -o-transform: translateY(5px);
     transform: translateY(5px); }
   80% {
     -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
-    -o-transform: translateY(-5px);
     transform: translateY(-5px); } }
 
 @keyframes swing {
   0% {
     -webkit-transform: translateX(2px);
-    -moz-transform: translateX(2px);
     -ms-transform: translateX(2px);
-    -o-transform: translateX(2px);
     transform: translateX(2px); }
   100% {
     -webkit-transform: translateX(-2px);
-    -moz-transform: translateX(-2px);
     -ms-transform: translateX(-2px);
-    -o-transform: translateX(-2px);
     transform: translateX(-2px); } }
 
 @keyframes ini-roll {
   0% {
     -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
     -ms-transform: rotate(0);
-    -o-transform: rotate(0);
     transform: rotate(0); }
   100% {
     -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 @keyframes brand-roll {
   0% {
     -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
     -ms-transform: rotate(0);
-    -o-transform: rotate(0);
     transform: rotate(0); }
   100% {
     -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 * {
@@ -140,21 +124,12 @@ hr:after {
     top: 5px;
     height: 60px;
     -webkit-animation: ini-roll 2s 3s;
-    -moz-animation: ini-roll 2s 3s;
-    -ms-animation: ini-roll 2s 3s;
-    -o-animation: ini-roll 2s 3s;
     animation: ini-roll 2s 3s; }
     #top-navbar .brand-img:hover {
       -webkit-animation: ini-roll 2s 3s;
-      -moz-animation: ini-roll 2s 3s;
-      -ms-animation: ini-roll 2s 3s;
-      -o-animation: ini-roll 2s 3s;
       animation: ini-roll 2s 3s; }
   #top-navbar .navbar-brand2:hover .brand-img {
     -webkit-animation: brand-roll 2s;
-    -moz-animation: brand-roll 2s;
-    -ms-animation: brand-roll 2s;
-    -o-animation: brand-roll 2s;
     animation: brand-roll 2s; }
   #top-navbar .nav li {
     background-color: #fff; }
@@ -214,9 +189,6 @@ hr:after {
 
 .swing-ani {
   -webkit-animation: swing 0.4s linear infinite alternate;
-  -moz-animation: swing 0.4s linear infinite alternate;
-  -ms-animation: swing 0.4s linear infinite alternate;
-  -o-animation: swing 0.4s linear infinite alternate;
   animation: swing 0.4s linear infinite alternate;
   display: inline-block; }
 
@@ -419,9 +391,6 @@ footer {
 
 .img-bounce:hover {
   -webkit-animation: bounce 0.8s linear infinite alternate;
-  -moz-animation: bounce 0.8s linear infinite alternate;
-  -ms-animation: bounce 0.8s linear infinite alternate;
-  -o-animation: bounce 0.8s linear infinite alternate;
   animation: bounce 0.8s linear infinite alternate; }
 
 /*** @media ***/

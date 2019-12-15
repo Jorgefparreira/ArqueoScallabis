@@ -1,9 +1,11 @@
 .DS_Store
 /node_modules
 /.sass-cache
-/dev
+
 /public/php
+/public/.htaccess
+
+
+
 .git
 /build
-/public/js/lib
-/src/courtesy.html

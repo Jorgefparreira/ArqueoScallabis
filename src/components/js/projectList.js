@@ -1,6 +1,7 @@
 let projectList = [
     {
       "id": "chao-da-feira",
+      "link": "projectos/chao-da-feira",
       "name": "Posto de combustíveis de Chão da Feira",
       "title": "Acompanhamento arqueológico da construção do posto de abastecimento de combustíveis líquidos de Chão da Feira, Porto de Mós",
       "partnership": "",
@@ -11,6 +12,7 @@ let projectList = [
     },
     {
       "id": "convento-st-antonio-convalescenca",
+      "link": "projectos/convento-st-antonio-convalescenca",
       "name": "Convento de St António da Convalescença",
       "title": "Levantamento patrimonial e arquitectónico do antigo Convento de Santo António da Convalescença, S. Domingos de Benfica, Lisboa",
       "partnership": "",
@@ -21,6 +23,7 @@ let projectList = [
     },
     {
       "id": "central-fotovoltaica-arronchais",
+      "link": "projectos/central-fotovoltaica-arronchais",
       "name": "Central Fotovoltaica de Arronchais, Moura",
       "title": "Prospecção arqueológica para o EIA do projecto da Central Fotovoltaica de Arronchais, Moura",
       "partnership": "",
@@ -31,6 +34,7 @@ let projectList = [
     },
     {
       "id": "central-fotovoltaica-encarnado",
+      "link": "projectos/central-fotovoltaica-encarnado",
       "name": "Central Fotovoltaica de Encarnado",
       "title": "Prospecção arqueológica para o EIA do projecto da Central Fotovoltaica de Encarnado, Cartaxo e Santarém",
       "partnership": "",
@@ -41,6 +45,7 @@ let projectList = [
     },
     {
       "id": "rua-martires-patria",
+      "link": "projectos/rua-martires-patria",
       "name": "Rua dos Mártires da Pátria, Setúbal",
       "title": "Sondagens Arqueológicas na Rua dos Mártires da Pátria, Setúbal",
       "partnership": "",
@@ -51,6 +56,7 @@ let projectList = [
     },
     {
       "id": "travessa-monteiro-rua-direita",
+      "link": "projectos/travessa-monteiro-rua-direita",
       "name": "Travessa do Monteiro e a Rua Direita, Coruche",
       "title": "Sondagens Arqueológicas na construção de edifício multifamiliar no gaveto entre a Travessa do Monteiro e a Rua Direita, Coruche",
       "partnership": "",
@@ -61,6 +67,7 @@ let projectList = [
     },
     {
       "id": "villa-rio-maior",
+      "link": "projectos/villa-rio-maior",
       "name": "Villa Romana de Rio Maior",
       "title": "Sondagens Arqueológicas na Villa Romana de Rio Maior (requalificação da frente ribeirinha)",
       "partnership": "",
@@ -70,17 +77,8 @@ let projectList = [
       "images": ["img/villa-rio-maior_2.jpg","img/villa-rio-maior_3.jpg","img/villa-rio-maior_1.jpg"]
     },
     {
-      "id": "arquivo",
-      "name": "",
-      "title": "",
-      "partnership": "",
-      "client": "",
-      "description": "",
-      "coverImage": "img/archive-thumb.jpg",
-      "images": [""]
-    },
-    {
       "id": "rua-1-dezembro",
+      "link": "projectos/rua-1-dezembro",
       "name": "Rua 1º de Dezembro, Santarém",
       "title": "Trabalhos arqueológicos na reabilitação de edifício na R. 1º de Dezembro, Santarém",
       "partnership": "",
@@ -88,7 +86,13 @@ let projectList = [
       "description": "Sondagens arqueológicas de diagnóstico e acompanhamento das fases de picagem de paredes e de abertura de valas para infraestruturas. Destaca-se a descoberta de uma porta ogival de época medieval, que será reabilitada e restituída à sua função original de acesso ao edifício, mas também um depósito de materiais arqueológicos cerâmicos inteiros, de época Moderna, entre paredes e que possibilitaram a identificação dos proprietários do imóvel no Séc. XVII. Estes materiais vão ficar em exposição após a reabilitação, que irá dar origem a um estabelecimento hoteleiro.",
       "coverImage": "img/rua-1-dezembro-santarem_1.jpg",
       "images": ["img/rua-1-dezembro-santarem_1.jpg","img/rua-1-dezembro-santarem_3.jpg","img/rua-1-dezembro-santarem_4.jpg"]
-    }
+    },
+    {
+      "id": "",
+      "link":"/arquivo",
+      "name":"",
+      "coverImage":"img/archive-thumb.jpg",
+    },  
   ];
 
   let archiveList = [
@@ -175,7 +179,7 @@ let projectList = [
       "projectImage1":"img/Montelavar_1.jpg",
       "projectImage2":"img/Montelavar_2.jpg",
       "projectImage3":"img/Montelavar_3.jpg"
-    },
+    },  
     {
       "id":"6",
       "name":"Rua dos Navegantes, Cascais",
@@ -190,4 +194,6 @@ let projectList = [
       "projectImage2":"img/Navegantes_3.jpg",
       "projectImage3":"img/Navegantes_4.jpg"
     }     
-  ]
+  ];
+
+  module.exports = {projectList, archiveList};
