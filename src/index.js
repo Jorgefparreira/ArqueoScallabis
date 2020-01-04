@@ -17,46 +17,10 @@ const initMap = () => {
 
 
 window.addEventListener('load', event => {
-  document.querySelectorAll('#top-navbar a').forEach(anchor => {
-    anchor.addEventListener("click", (event) => {
-      event.preventDefault()
-    });
-  })
   document.querySelectorAll(".faq-header").forEach(header => {
     header.addEventListener('click', faqs.showAnswer)
   });
-  document.querySelector(".faq-header").click()
-
-
-  // CAROUSEL
-
-  $('.owl-carousel').owlCarousel({
-    center: true,
-    loop: true,
-    margin: 10,
-    responsiveClass: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
-    mergeFit: false,
-    merge: true,
-    autoplayHoverPause: true,
-
-    responsive: {
-      0: {
-        items: 2,
-        autoplay: false,
-        autoplayTimeout: 10000000,
-      },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 3,
-      }
-    }
-  })
+  // document.querySelector(".faq-header").click()
 
 });
 

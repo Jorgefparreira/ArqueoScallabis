@@ -5,120 +5,163 @@ let clientes = {
   html: `
   <div class="container">
   <div class="row">
-    <div class="col-md-12 clientes-list">
+    <div class="col-md-12">
       <div class="clearfix">&nbsp;</div>
       <div class="clearfix">&nbsp;</div>
       <h1>Clientes</h1>
-  
-      <h2 class="h3">Clientes Empresariais:</h2>
-      <div class="clearfix">&nbsp;</div>
-      <ul> 
-        <li><span class="client-cap">Ecoedifica, Ambiente e construções, S.a. </span><span class="cli-indent">- Casa
-            Mortuária da Igreja de Santa Iria da Ribeira de Santarém</span></li>
-  
-        <li><span class="client-cap">Ancorpor, Geotécnica e fundações, Lda. </span><span class="cli-indent">- <a
-              href="/#!/archive/details/2#projects">Projecto De Estabilização e Consolidação das Barreiras do Forte De
-              S. Filipe, Setúbal</a></span><span class="cli-indent">- <a href="/#!/archive/details/0#projects">Encosta
-              de Santa Margarida, Santarém</a></span></li>
-  
-        <li><span class="client-cap">Inês Brandão Arquitetura </span><span class="cli-indent">- <a
-              href="/#!/archive/details/1#projects">Reabilitação de edifício na Rua da Cruz De Santa Apolónia,
-              Lisboa</a></span><span class="cli-indent">- Reabilitação de edifício na Rua do Conde, Lisboa</span></li>
-  
-        <li><span class="client-cap">Esquissos, Arquitetura e Consultoria </span><span class="cli-indent">- <a
-              href="/#!/archive/details/6#projects">Reabilitação de edifício na Rua dos Navegantes,
-              Cascais</a></span><span class="cli-indent">- <a href="/#!/archive/details/5#projects">Reconstrução de
-              Edifício no Largo Da Igreja de Montelavar, Sintra</a></span></li>
-  
-        <li><span class="client-cap">Craftrade, Sociedade de representações e investimentos imobiliários, Lda. </span>
-          <span class="cli-indent">- <a href="/#!/archive/details/3#projects">Reabilitação de edifício na Av. 5 De
-              Outubro, Santarém</a></span><span class="cli-indent">- <a href="/#!/details/8#projects">Reabilitação de
-              edifício na Rua 1.º De Dezembro, Santarém</a></span><span class="cli-indent">- Parecer Técnico de
-            Arqueologia para a reabilitação de edifício na Av. 5 de Outubro, Santarém</span><span class="cli-indent">-
-            Parecer Técnico de Arqueologia para a reabilitação de edifício na Prç Visconde Serra do Pila,
-            Santarém</span></li>
-  
-        <li><span class="client-cap">Ambiágua, S.a.</span> <span class="cli-indent">- <a
-              href="/#!/archive/details/4#projects">Empreitada de Concepção-Construção da Etar De Ortiga,
-              Mação</a></span></li>
-  
-        <li><span class="client-cap">JJR, Construções, Lda.</span> <span class="cli-indent">- Situação de Referência
-            Arqueológica para O Contrato de Concessão da Manutenção/Conservação da Rede Viária dos Distritos de Leiria
-            E Santarém</span></li>
-  
-        <li><span class="client-cap">Succeed, Investimentos Imobiliários e Formação Profissional, S.a.</span> <span
-            class="cli-indent">- <a href="/#!/details/1#projects">Levantamento patrimonial do Convento de Santo
-              António da Convalescença, Lisboa</a></span></li>
-  
-        <li><span class="client-cap">Construbel, Lda.</span> <span class="cli-indent">- <a
-              href="/#!/details/6#projects">Reabilitação da Frente ribeirinha de Rio Maior</a></span></li>
-  
-        <li><span class="client-cap">Léguas e Destinos, Lda.</span> <span class="cli-indent">- <a
-              href="/#!/details/0#projects">Construção do posto de abastecimento de combustíveis líquidos de Chão da
-              Feira, Porto de Mós</a></span></li>
-  
-        <li><span class="client-cap">Mpt, Mobilidade e Planeamento do Território </span><span class="cli-indent">-
-            Parecer técnico para o projecto de implementação dos percursos confortáveis no centro histórico de
-            Santarém</span></li>
-  
-        <li><span class="client-cap">Pedramoca, Sociedade extractiva de pedra, Lda. </span><span class="cli-indent">-
-            Pedreira das Fragas da Chainça</span></li>
-      </ul>
-      <div class="clearfix">&nbsp;</div>
-      <hr>
-      <div class="clearfix">&nbsp;</div>
-  
-      <h2 class="h3">Clientes Privados:</h2>
-      <div class="clearfix">&nbsp;</div>
-      <ul>
-        <li><span class="client-cap">A. M. Coelho</span> <span class="cli-indent">- Construção de moradia unifamiliar
-            em Azambujeira, Rio Maior</span></li>
-  
-        <li><span class="client-cap">M. I. Mendonça</span> <span class="cli-indent">- Reabilitação de edifício no Beco
-            do Feleijo, Santarém</span></li>
-  
-        <li><span class="client-cap">D. Rosenberg</span> <span class="cli-indent">- Reabilitação de imóvel na Rua da
-            Cruz de Santa Apolónia, Lisboa</span><span class="cli-indent">- <a
-              href="/#!/details/4#projects">Reabilitação de imóvel na Rua Mártires da Pátria, Setúbal</a></span></li>
-      </ul>
-  
-      <div class="clearfix">&nbsp;</div>
-  
-      <hr>
-      <div class="clearfix">&nbsp;</div>
-  
-      <h2 class="h3">Clientes Públicos:</h2>
-      <div class="clearfix">&nbsp;</div>
-      <ul>
-        <li><span class="client-cap">Águas de Santarém, E.M.S.A.</span> <span class="cli-indent">- Ramal de Saneamento
-            na Travessa Do Mayer, Ribeira de Santarém</span><span class="cli-indent">- Ramal de abastecimento de água
-            na Rua Dr. Joaquim Luís Martins, Santarém</span><span class="cli-indent">- Ramal de abastecimento de água
-            na Travessa do Bom Jesus das Almas, Santarém</span><span class="cli-indent">- Ramal de abastecimento de
-            água na Rua Serpa Pinto, Santarém</span><span class="cli-indent">- Ramal na Rua do Bairro César,
-            Santarém</span><span class="cli-indent">- Ramal na Rua Miguel Bombarda, Santarém</span><span
-            class="cli-indent">- Ramal na Rua de Alcource, Ribeira de Santarém</span><span class="cli-indent">- Ramal
-            no Beco do Feleijo, Santarém</span></li>
-  
-        <li><span class="client-cap">Câmara Municipal de Coruche</span> <span class="cli-indent">- <a
-              href="/#!/details/5#projects">Construção de edifício multifamiliar no gaveto entre a Travessa do
-              Monteiro e a Rua Direita, Coruche</a></span><span class="cli-indent">- Carta Arqueológica do
-            Concelho</span></li>
-  
-        <li><span class="client-cap">Câmara Municipal de Porto de Mós </span><span class="cli-indent">- Ramal no de
-            água no IC2</span></li>
-      </ul>
-  
-      <div class="clearfix">&nbsp;</div>
-  
-      <hr>
-      <div class="clearfix">&nbsp;</div>
-  
-      <h2 class="h3">Parcerias:</h2>
-      <div class="clearfix">&nbsp;</div>
-      <li><span class="client-cap">Cornucópia River</span>, Arqueologia Unipessoal</li>
-      <li><span class="client-cap">Emerita</span>, Empresa Portuguesa de Arqueologia</li>
+      <div id="clientes-list"></div>
     </div>
   </div>
   </div>
-  `
+  `,
+  init: () => {
+    clientsListHTML = '';
+    for (var property in clientsList) {
+      for (var property2 in clientsList[property]) {
+        for (var clientType in clientsList[property][property2]) {
+          clientsListHTML += `<h2 class="h3">${clientType}</h2>`
+          for (var property4 in clientsList[property][property2][clientType]) {
+            for (var clientName in clientsList[property][property2][clientType][property4]) {
+              clientsListHTML += `<p class="client-name">${clientName}</p>`
+              clientsList[property][property2][clientType][property4][clientName].forEach(project => {
+                clientsListHTML += `<p class="client-project"> - ${project}</p>`
+              });
+            }  
+          }            
+        }        
+      }
+    }
+    document.querySelector('#clientes-list').innerHTML = clientsListHTML;
+    document.querySelector(".empty-client").parentElement.style.display = 'none';
+  }
+}
+
+let clientsList = {
+  "clientes": [
+    {"Clientes Empresariais:":[
+      {"Ecoedifica, Ambiente e construções, SA":[
+        "Construção da Casa Mortuária da Igreja de Santa Iria da Ribeira de Santarém"
+      ]},
+      {"Ancorpor, Geotécnica e fundações, Lda ":[
+        "<a href='/#!/archive/details/2#projects'>Projecto De Estabilização e Consolidação das Barreiras do Forte De        S. Filipe, Setúbal</a>"
+      ]},
+      {"Inês Brandão Arquitetura":[
+        "Reabilitação de imóvel na Rua do Conde, Lisboa"
+      ]},
+      {"Esquissos, Arquitetura e Consultoria":[
+        "<a href='/#!/archive/details/6#projects'>Reabilitação de edifício na Rua dos Navegantes, Cascais</a>",
+        "<a href='/#!/archive/details/5#projects'>Reconstrução de      Edifício no Largo Da Igreja de Montelavar, Sintra</a>"
+      ]},
+      {"Craftrade – Sociedade de representações e investimentos imobiliários, Lda":[
+        "Acompanhamento arqueológico durante a reabilitação de imóvel na Avenida 5 de Outubro I, Santarém",
+        "Sondagens arqueológicas para a reabilitação de imóvel na Rua 1.º De Dezembro, Santarém",
+        "Acompanhamento arqueológico para a reabilitação de imóvel na Rua 1º de Dezembro, Santarém",
+        "Parecer Técnico de Arqueologia para a reabilitação de imóvel na Avenida 5 de Outubro II, Santarém",
+        "Parecer Técnico de Arqueologia para a reabilitação de imóvel na Praça Visconde Serra do Pilar, Santarém",
+        "Sondagens Arqueológicas para a reabilitação de imóvel na Praça Visconde Serra do Pilar, Santarém",
+        "Acompanhamento arqueológico para para a reabilitação de imóvel na Praça Visconde Serra do Pilar, Santarém",
+        "Sondagens arqueológicas para a reabilitação de imóvel no Largo Pedro António Monteiro, Santarém"
+      ]},
+      {"Ambiágua, SA":[
+        "<a href='/#!/archive/details/4#projects'>Empreitada de Concepção-Construção da Etar De Ortiga, Mação</a>"
+      ]},
+      {"JJR, Construções, Lda ":[
+        "Situação de Referência Arqueológica para o Contrato de Concessão da Manutenção/Conservação da Rede Viária dos Distritos de Leiria e Santarém",
+        "Beneficiação do traçado viário da EN.362 – Alcanede (Km 31+025) e entroncamento com a EN. 3 – Santarém (Km 51+713)"
+      ]},
+      {"Succeed, Investimentos Imobiliários e Formação Profissional, SA ":[
+        "<a href='/#!/details/1#projects'>Levantamento patrimonial e arquitectónico do antigo Convento de Santo António da Convalescença, São Domingos de Benfica, Lisboa</a>"
+      ]},
+      {"Construbel, Engenharia Lda":[
+        "<a href='/#!/details/6#projects'>Requalificação da villa Romana de Rio Maior</a>"
+      ]},
+      {"Léguas e Destinos, Lda e Espiral Genial, Lda":[
+        "<a href='/#!/details/0#projects'>Construção do posto de abastecimento de combustíveis líquidos de Chão da Feira, Porto de Mós</a>"
+      ]},
+      {"MPT, Mobilidade e Planeamento do Território":[
+        "Parecer técnico para o projecto de implementação dos percursos confortáveis no centro histórico de Santarém"
+      ]},
+      {"Pedramoca, Sociedade extractiva de pedra, Lda":[
+        "Levantamento patrimonial na pedreira das Fragas da Chainça",
+        "Acompanhamento arqueológico na pedreira das Fragas da Chainça"
+      ]},
+      {"Angulo Recto – Construções, Lda":[
+        "Requalificação da Várzea Grande, Tomar"
+      ]},
+      {"JJ Tomé, S.A.":[
+        "Acompanhamento arqueológico de ramal de electricidade na Rua do Castelo, Vidigueira",
+        "Acompanhamento arqueológico de ramal de eletricidade na Rua da Boavista/ Lg. De S. Francisco, Vidigueira",
+        "Acompanhamento arqueológico de ramal de electricidade na Rua 24 de Julho, Évora",
+        "Acompanhamento arqueológico de ramal de electricidade na Rua 5 de Outubro, Évora"
+      ]},
+      {"Farmácia Nave Ribeiro, Lda":[
+        "Sondagens arqueológicas para a construção de imóvel no Largo da Igreja de Nossa Senhora da Purificação de Montelavar, Sintra",
+        "Acompanhamento arqueológico da construção de imóvel no Largo da Igreja de Nossa Senhora da Purificação de Montelavar, Sintra"
+      ]},
+      {"FCP Construções, Lda":[
+        "Acompanhamento arqueológico da construção do crematório do cemitério dos Capuchos, Santarém"
+      ]},
+      {"Sudtel Tecnologia, S.A.":[
+        "Acompanhamento arqueológico de valas para colocação de cabos telefónicos na Rua 15 de Março, Santarém",
+        "Acompanhamento arqueológico de valas para colocação de cabos telefónicos na Travessa do Outeirinho, Santarém"
+      ]},
+      {"Miguel Raposo Design":[
+        "Sondagens arqueológicas para a reabilitação de imóvel na R. Vicente Borga, Lisboa",
+        "Sondagens arqueológicas para a reabilitação de imóvel na Travessa de São Bernardino, Lisboa "
+      ]}                    
+      ]
+    },{
+      "Clientes Privados:":[
+        {"<span class='empty-client'></span>":[
+          "Acompanhamento arqueológico de construção de moradia unifamiliar em Azambujeira, Rio Maior",
+          "Acompanhamento arqueológico de reabilitação de imóvel no Beco do Feleijo, Santarém",
+          "Acompanhamento arqueológico de reabilitação de imóvel na Rua da Cruz de Santa Apolónia, Lisboa ",
+          "<a href='/#!/details/4#projects'>Acompanhamento arqueológico de reabilitação de imóvel na Rua Mártires da Pátria, Setúbal</a>",
+          "Acompanhamento arqueológico de construção de Moradia unifamiliar na Quinta das Carrancas, Palmela",
+          "Parecer técnico com vista à reabilitação de imóvel na Rua Neves Costa, Lisboa",
+          "Sondagens arqueológicas para a reabilitação de imóvel na Rua dos Navegantes, Cascais",
+          "Sondagens arqueológicas para a construção de imóvel na Rua Cândido dos Reis, Colares",
+          "Acompanhamento arqueológico da construção de imóvel na Rua Cândido dos Reis, Colares",
+          "Acompanhamento arqueológico da ampliação de unidade industrial, Chamusca",
+          "Acompanhamento arqueológico de remodelação de imóvel na Travessa da Bica aos Anjos"          
+        ]}
+      ]      
+    },{
+      "Clientes Públicos:":[
+        {"Águas de Santarém, E.M.S.A. ":[
+          "Acompanhamento arqueológico de ramal na Travessa do Mayer, Ribeira de Santarém",
+          "Acompanhamento arqueológico de ramal na Rua Dr. Joaquim Luís Martins, Santarém",
+          "Acompanhamento arqueológico de ramal na Travessa do Bom Jesus das Almas I, Santarém",
+          "Acompanhamento arqueológico de ramal na Rua Serpa Pinto I, Santarém, ",
+          "Acompanhamento arqueológico de ramal na Rua do Bairro César, Santarém",
+          "Acompanhamento arqueológico de ramal na Rua Miguel Bombarda, Santarém",
+          "Acompanhamento arqueológico de ramal na Rua de Alcource, Ribeira de Santarém)",
+          "Acompanhamento arqueológico de ramal no Beco do Feleijo, Santarém",
+          "Acompanhamento arqueológico de ramal na Travessa do Bom Jesus das Almas II, Santarém",
+          "Acompanhamento arqueológico de ramal na Rua Miguel Bombarda, Santarém",
+          "Acompanhamento arqueológico de ramal na Rua Cidade da Covilhã, Santarém",
+          "Acompanhamento arqueológico de ramal no Largo do Terreirinho das Flores, Santarém",
+          "Acompanhamento arqueológico de ramal na Rua Serpa Pinto II, Santarém"
+        ]},
+        {"Câmara Municipal de Coruche":[
+          "<a href='/#!/details/5#projects'>Construção de edifício multifamiliar no gaveto entre a Travessa do Monteiro e a Rua Direita, Coruche</a>",
+          "Carta Arqueológica do Concelho"
+        ]},
+        {"Câmara Municipal de Porto de Mós":[
+          "Ramal no de água no IC2"
+        ]}        
+      ]
+    },{
+      "Parcerias:":[
+        {"Cornucópia River, Arqueologia Unipessoal":[
+          "Rede de gás dos Concelhos de Alpiarça. Almeirim, Coruche, Cartaxo, Salvaterra de Magos e Santarém"
+        ]},
+        {"Emerita, Empresa Portuguesa de Arqueologia":[
+          "Projecto Global de Estabilização das Encostas de Santarém (1.ª fase), Santarém",
+          "Estudo de Impacte ambiental para o Parque Fotovoltaico do Encarnado, Cartaxo e Santarém",
+          "Estudo de Impacte ambiental para o Parque Fotovoltaico dos Arronchais, Moura"
+        ]}        
+      ]
+    }
+  ]
 }

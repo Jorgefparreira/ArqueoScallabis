@@ -17,12 +17,15 @@ let projects = {
 
   },
   returnList: () => {
-    document.querySelector("#project-details").innerHTML = "";
-    document.querySelector("#project-container").style.display = "block";
+    router.loadIndex('#projects')
   }, 
   loadProjectDetail: projectId => {
+    document.querySelector('#projectos').scrollIntoView();
       document.querySelector("#project-container").style.display = "none";
-      const project = projectList.find(item => item.id == projectId);
+      let project = projectList.find(item => item.id == projectId);
+      if(!project){
+        project = archiveList.find(item => item.id == projectId);
+      }
       const {images, title, partnership, client, description} = project;
       let projectImages = "";
       images.forEach(image => {
@@ -41,12 +44,22 @@ let projects = {
             </div>
             ${projectImages}
           </div>
-          <a href="#projects"><p>&laquo; Voltar</p></a>
+          <a href="/#projectos" class="page-link"><p>&laquo; Voltar</p></a>
         </div>
       `;
-      router.loadSection(projectHTML,'#project-details')
+      const init = () => {
+        try {
+          router.loadSection(projectHTML,'#project-details') 
+        } catch (error) {
+          setTimeout(() => {
+            init()
+          }, 500);
+        }      
+      }
+      init()      
   },
   loadArchive: () => {
+    document.querySelector('#projectos').scrollIntoView();
     document.querySelector("#project-container").style.display = "none";
     let archiveProjectsHTML = '';
     archiveList.forEach(project => {
@@ -56,7 +69,7 @@ let projects = {
     });
 
     let archiveHTML = `
-      <div class="projects-return" onclick="projects.returnList()"><h3><span class="{{swing}}">&laquo;</span> Projectos</h3></div>
+      <a href="/#projectos" class="page-link projects-return"><h3><span>&laquo;</span> Projectos</h3></a>
       <br>
       <div class="container">
         <div class="row">
@@ -64,15 +77,22 @@ let projects = {
           <br>
           ${archiveProjectsHTML}
         </div>
-        <a href="#projects"><p>&laquo; Voltar</p></a>
+        <a href="/#projectos" class="page-link"><p>&laquo; Voltar</p></a>
       </div>
-    `; 
-    router.updateHead("arquivo", "Arquivo", "Arquivo de projectos");
-    router.loadSection(archiveHTML,'#project-details') 
+    `;
+    const init = () => {
+      try {
+        router.updateHead("arquivo", "Arquivo", "Arquivo de projectos");
+        router.loadSection(archiveHTML,'#project-details') 
+      } catch (error) {
+        setTimeout(() => {
+          init()
+        }, 500);
+      }      
+    }
+    init()
   }
 
 };
-
-
 
 export default projects;

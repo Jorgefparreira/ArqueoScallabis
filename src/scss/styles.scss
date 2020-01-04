@@ -410,9 +410,22 @@ hr:after {
   padding-top: 25px;
 }
 
-.clientes-list li {
+#clientes-list h2 {
+  margin-bottom: 6px;
+}
+
+#clientes-list .client-name {
   margin-bottom: 10px;
   font-size: 18px;
+  display: list-item;
+  margin: 8px 0 0 40px;
+  text-transform: uppercase;
+}
+
+#clientes-list .client-project {
+  margin-left: 60px;
+  margin-bottom: 4px;
+  font-size: 15px;
 }
 
 .inv-text {
