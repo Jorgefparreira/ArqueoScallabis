@@ -20,7 +20,7 @@ window.addEventListener('load', event => {
   document.querySelectorAll(".faq-header").forEach(header => {
     header.addEventListener('click', faqs.showAnswer)
   });
-  // document.querySelector(".faq-header").click()
+  initMap() 
 
 });
 

@@ -15,7 +15,7 @@ let router = {
       document.querySelectorAll('.faq-header').forEach(question =>{
         question.addEventListener("click", faqs.showAnswer)
       })
-    }
+    } 
   },
   getRoute: (e) => {
     let route = "/";
@@ -41,36 +41,41 @@ let router = {
   loadIndex: (section) => {
     if(document.querySelector("#projects-carousel").innerHTML == ""){
       router.loadSection(projects.loadList(), '#projects-carousel');
-      setTimeout(() => {
-        $('.owl-carousel').owlCarousel({
-          center: true,
-          loop: true,
-          margin: 10,
-          responsiveClass: true,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          animateOut: 'slideOutDown',
-          animateIn: 'flipInX',
-          mergeFit: false,
-          merge: true,
-          autoplayHoverPause: true,
-          responsive: {
-            0: {
-              items: 2,
-              autoplay: false,
-              autoplayTimeout: 10000000,
-            },
-            600: {
-              items: 2,
-            },
-            1000: {
-              items: 3,
+      const init = () => {
+        try {
+          $('.owl-carousel').owlCarousel({
+            center: true,
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            animateOut: 'slideOutDown',
+            animateIn: 'flipInX',
+            mergeFit: false,
+            merge: true,
+            autoplayHoverPause: true,
+            responsive: {
+              0: {
+                items: 2,
+                autoplay: false,
+                autoplayTimeout: 10000000,
+              },
+              600: {
+                items: 2,
+              },
+              1000: {
+                items: 3,
+              }
             }
-          }
-        })        
-      }, 1000);
-      
-      router.loadSection(faqs.loadData(), '#accordion-container') 
+          }) 
+        } catch (error) {
+          setTimeout(() => {
+            init()
+          }, 200);
+        }      
+      }
+      init()       
     }
     document.querySelector("#main-container").style.display = "block";
     document.querySelector("#project-container").style.display = "block";
@@ -80,13 +85,11 @@ let router = {
     document.querySelector(section).scrollIntoView({ behavior: 'smooth' });
     router.updateHead("/","ArqueoScallabis","")
   },  
-  loadProjectSection: (route) => {
+  loadProjectSection: route => {
     if(route[0] != "arquivo"){
-      router.updateHead(`${route[0]}/${route[1]}`, `${route[1]} | ${route[0]}`, "")      
-      projects.loadProjectDetail(route[1]);  
+      projects.loadProjectDetail(route);  
     } else if(route[1]){
-      projects.loadProjectDetail(route[1]);
-      console.log(route)
+      projects.loadProjectDetail(route);
     } else {
       projects.loadArchive();
     }
@@ -100,7 +103,7 @@ let router = {
       window.scrollTo(0,0)        
     } catch (error) {
       let script = document.createElement('script');
-      script.src = `/js/${page}.js`;
+      script.src = `js/${page}.js`;
       document.head.appendChild(script);
       document.querySelector("#router-container").scrollIntoView();
       script.onload = () => {
@@ -117,10 +120,22 @@ let router = {
   
 }  
 
-
+router.loadSection(faqs.loadData(), '#accordion-container') 
 router.getRoute()
 window.onpopstate = () => {
   router.getRoute()
+}
+
+const initMap = () => {
+  var hqMarker = { lat: 39.238926, lng: -8.685768 };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: hqMarker
+  });
+  var marker = new google.maps.Marker({
+    position: hqMarker,
+    map: map
+  });
 }
 
 export default router;

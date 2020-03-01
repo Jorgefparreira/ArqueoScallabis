@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes bounce {
   50% {
     -webkit-transform: translateY(5px);
@@ -77,15 +76,6 @@ hr {
   border-top: medium solid #8c8c8c;
   color: #8c8c8c;
   text-align: center; }
-
-hr:after {
-  content: "§";
-  display: inline-block;
-  position: relative;
-  top: -0.7em;
-  font-size: 1.5em;
-  padding: 0 0.25em;
-  background: #fff; }
 
 .scrollspy-offset {
   height: 52px; }
@@ -436,7 +426,11 @@ footer {
       background: #dbd9d9; }
   .social {
     position: absolute;
-    top: 10px; } }
+    top: 10px; }
+  .feder-logo {
+    max-height: 70px;
+    position: absolute;
+    right: 15px; } }
 
 @media (max-width: 330px) {
   .navbar-brand {

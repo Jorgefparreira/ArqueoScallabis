@@ -43,14 +43,14 @@ let clientsList = {
         "Construção da Casa Mortuária da Igreja de Santa Iria da Ribeira de Santarém"
       ]},
       {"Ancorpor, Geotécnica e fundações, Lda ":[
-        "<a href='/#!/archive/details/2#projects'>Projecto De Estabilização e Consolidação das Barreiras do Forte De        S. Filipe, Setúbal</a>"
+        "<a href='/arquivo/forte-sao-filipe'>Projecto De Estabilização e Consolidação das Barreiras do Forte De S. Filipe, Setúbal</a>"
       ]},
       {"Inês Brandão Arquitetura":[
         "Reabilitação de imóvel na Rua do Conde, Lisboa"
       ]},
       {"Esquissos, Arquitetura e Consultoria":[
-        "<a href='/#!/archive/details/6#projects'>Reabilitação de edifício na Rua dos Navegantes, Cascais</a>",
-        "<a href='/#!/archive/details/5#projects'>Reconstrução de      Edifício no Largo Da Igreja de Montelavar, Sintra</a>"
+        "<a href='/arquivo/rua-dos-navegantes'>Reabilitação de edifício na Rua dos Navegantes, Cascais</a>",
+        "<a href='/arquivo/largo-senhora-montelavar'>Reconstrução de edifício no Largo Da Igreja de Montelavar, Sintra</a>"
       ]},
       {"Craftrade – Sociedade de representações e investimentos imobiliários, Lda":[
         "Acompanhamento arqueológico durante a reabilitação de imóvel na Avenida 5 de Outubro I, Santarém",
@@ -63,20 +63,20 @@ let clientsList = {
         "Sondagens arqueológicas para a reabilitação de imóvel no Largo Pedro António Monteiro, Santarém"
       ]},
       {"Ambiágua, SA":[
-        "<a href='/#!/archive/details/4#projects'>Empreitada de Concepção-Construção da Etar De Ortiga, Mação</a>"
+        "<a href='/arquivo/etar-ortiga'>Empreitada de Concepção-Construção da Etar De Ortiga, Mação</a>"
       ]},
       {"JJR, Construções, Lda ":[
         "Situação de Referência Arqueológica para o Contrato de Concessão da Manutenção/Conservação da Rede Viária dos Distritos de Leiria e Santarém",
         "Beneficiação do traçado viário da EN.362 – Alcanede (Km 31+025) e entroncamento com a EN. 3 – Santarém (Km 51+713)"
       ]},
       {"Succeed, Investimentos Imobiliários e Formação Profissional, SA ":[
-        "<a href='/#!/details/1#projects'>Levantamento patrimonial e arquitectónico do antigo Convento de Santo António da Convalescença, São Domingos de Benfica, Lisboa</a>"
+        "<a href='/projectos/convento-st-antonio-convalescenca'>Levantamento patrimonial e arquitectónico do antigo Convento de Santo António da Convalescença, São Domingos de Benfica, Lisboa</a>"
       ]},
       {"Construbel, Engenharia Lda":[
-        "<a href='/#!/details/6#projects'>Requalificação da villa Romana de Rio Maior</a>"
+        "<a href='/projectos/villa-rio-maior'>Requalificação da villa Romana de Rio Maior</a>"
       ]},
       {"Léguas e Destinos, Lda e Espiral Genial, Lda":[
-        "<a href='/#!/details/0#projects'>Construção do posto de abastecimento de combustíveis líquidos de Chão da Feira, Porto de Mós</a>"
+        "<a href='/projectos/chao-da-feira'>Construção do posto de abastecimento de combustíveis líquidos de Chão da Feira, Porto de Mós</a>"
       ]},
       {"MPT, Mobilidade e Planeamento do Território":[
         "Parecer técnico para o projecto de implementação dos percursos confortáveis no centro histórico de Santarém"
@@ -116,7 +116,7 @@ let clientsList = {
           "Acompanhamento arqueológico de construção de moradia unifamiliar em Azambujeira, Rio Maior",
           "Acompanhamento arqueológico de reabilitação de imóvel no Beco do Feleijo, Santarém",
           "Acompanhamento arqueológico de reabilitação de imóvel na Rua da Cruz de Santa Apolónia, Lisboa ",
-          "<a href='/#!/details/4#projects'>Acompanhamento arqueológico de reabilitação de imóvel na Rua Mártires da Pátria, Setúbal</a>",
+          "<a href='/projectos/rua-martires-patria'>Acompanhamento arqueológico de reabilitação de imóvel na Rua Mártires da Pátria, Setúbal</a>",
           "Acompanhamento arqueológico de construção de Moradia unifamiliar na Quinta das Carrancas, Palmela",
           "Parecer técnico com vista à reabilitação de imóvel na Rua Neves Costa, Lisboa",
           "Sondagens arqueológicas para a reabilitação de imóvel na Rua dos Navegantes, Cascais",
@@ -144,13 +144,13 @@ let clientsList = {
           "Acompanhamento arqueológico de ramal na Rua Serpa Pinto II, Santarém"
         ]},
         {"Câmara Municipal de Coruche":[
-          "<a href='/#!/details/5#projects'>Construção de edifício multifamiliar no gaveto entre a Travessa do Monteiro e a Rua Direita, Coruche</a>",
+          "<a href='/projectos/travessa-monteiro-rua-direita'>Construção de edifício multifamiliar no gaveto entre a Travessa do Monteiro e a Rua Direita, Coruche</a>",
           "Carta Arqueológica do Concelho"
         ]},
         {"Câmara Municipal de Porto de Mós":[
           "Ramal no de água no IC2"
         ]}        
-      ]
+      ] 
     },{
       "Parcerias:":[
         {"Cornucópia River, Arqueologia Unipessoal":[

@@ -1,7 +1,7 @@
 import { projectList, archiveList } from './projectList';
 import router from './router';
 
-let projects = {
+let projects = { 
   loadList: () => {
     let projectsHTML = '';
     projectList.forEach(project => {
@@ -19,7 +19,8 @@ let projects = {
   returnList: () => {
     router.loadIndex('#projects')
   }, 
-  loadProjectDetail: projectId => {
+  loadProjectDetail: route => {
+    const projectId = route[1];
     document.querySelector('#projectos').scrollIntoView();
       document.querySelector("#project-container").style.display = "none";
       let project = projectList.find(item => item.id == projectId);
@@ -50,10 +51,11 @@ let projects = {
       const init = () => {
         try {
           router.loadSection(projectHTML,'#project-details') 
+          router.updateHead(`${route[0]}/${route[1]}`, `${route[1]} | ${route[0]}`, "")
         } catch (error) {
           setTimeout(() => {
             init()
-          }, 500);
+          }, 200);
         }      
       }
       init()      
@@ -64,7 +66,7 @@ let projects = {
     let archiveProjectsHTML = '';
     archiveList.forEach(project => {
       archiveProjectsHTML += `<div class="col-md-4">
-      <div class="project-box"><h3 class="list-title">${project.name}</h3><a href="/arquivo/${project.id}"><img src="/${project.coverImage}" class="img-responsive project-img"></a></div>	
+      <div class="project-box"><h3 class="list-title">${project.name}</h3><a href="/arquivo/${project.id}" class="page-link"><img src="/${project.coverImage}" class="img-responsive project-img"></a></div>	
     </div>`
     });
 
@@ -87,7 +89,7 @@ let projects = {
       } catch (error) {
         setTimeout(() => {
           init()
-        }, 500);
+        }, 200);
       }      
     }
     init()

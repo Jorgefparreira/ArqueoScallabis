@@ -7,4 +7,4 @@ let faqList = [
   ['Quem tem a obrigação de pagar os serviços de Arqueologia, Restauro ou Antropologia, caso sejam necessários?', 'Qualquer serviço que venha a ser fornecido pela ArqueoScallabis será pago pela entidade contratante do mesmo, isto é, o Dono de Obra ou a Entidade Promotora da mesma. O pagamento de serviços prestado por uma empresa de Arqueologia não é diferente do pagamento de serviços de Ambiente, Higiene e Segurança (HSST), Topografia, ou outros necessários ao bom funcionamento da empreitada.']
 ] 
 
-module.exports = faqList;
+module.exports = faqList; 
