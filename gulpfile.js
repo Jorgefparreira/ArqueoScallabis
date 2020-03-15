@@ -41,6 +41,7 @@ function watchFiles() {
   gulp.watch('src/scss/*.scss', sassDev);
   gulp.watch('src/pages/index.html', concatHTML);
   gulp.watch('src/components/html/*.html', concatHTML);
+  gulp.watch('src/*.html', concatHTML);
   gulp.watch('src/pages/*.js', movePages);
   // gulp.watch("src/**/*.*").on("change", browserSync.reload);
 }

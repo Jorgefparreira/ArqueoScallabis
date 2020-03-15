@@ -18,11 +18,17 @@ let router = {
     } 
   },
   getRoute: (e) => {
+    let hostname;
+    if(window.location.hostname === 'localhost'){
+      hostname = 'localhost:3000';
+    } else {
+      hostname = window.location.hostname;
+    }
     let route = "/";
     try {
       route = e.target.closest("a").getAttribute("href");
     } catch (error) {
-      route = window.location.href.replace("http://localhost:3000","")
+      route = window.location.href.replace('http://'+hostname,"")
     }
 
     route = route.split("/");
@@ -62,7 +68,7 @@ let router = {
                 autoplayTimeout: 10000000,
               },
               600: {
-                items: 2,
+                items: 2, 
               },
               1000: {
                 items: 3,
@@ -95,19 +101,20 @@ let router = {
     }
   },
   loadPage: (page) =>{
+    router.loadIndex('#home');
     try {
       document.querySelector("#main-container").style.display = "none";
       document.querySelector("#router-container").innerHTML = eval(page).html;
       eval(page).init();
-      router.updateHead(eval(page).url, eval(page).title, eval(page).description)
-      window.scrollTo(0,0)        
+      router.updateHead(eval(page).url, eval(page).title, eval(page).description);
+      window.scrollTo(0,0);
     } catch (error) {
       let script = document.createElement('script');
       script.src = `js/${page}.js`;
       document.head.appendChild(script);
       document.querySelector("#router-container").scrollIntoView();
       script.onload = () => {
-        router.loadPage(page)
+        router.loadPage(page);
       }; 
     }
   },
@@ -116,6 +123,14 @@ let router = {
     window.history.pushState("","", url);
     document.title = title; 
     document.querySelector('meta[name="description"]').setAttribute("content", description);
+  },
+  toggleNavbar:()=>{
+    let navbar = document.querySelector('.navbar-collapse')
+    if(navbar.classList.contains('navbar-show')){
+      navbar.classList.remove('navbar-show');
+    } else{
+      navbar.classList.add('navbar-show'); 
+    }
   }
   
 }  
@@ -124,18 +139,6 @@ router.loadSection(faqs.loadData(), '#accordion-container')
 router.getRoute()
 window.onpopstate = () => {
   router.getRoute()
-}
-
-const initMap = () => {
-  var hqMarker = { lat: 39.238926, lng: -8.685768 };
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: hqMarker
-  });
-  var marker = new google.maps.Marker({
-    position: hqMarker,
-    map: map
-  });
 }
 
 export default router;

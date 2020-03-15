@@ -27,7 +27,7 @@ let projects = {
       if(!project){
         project = archiveList.find(item => item.id == projectId);
       }
-      const {images, title, partnership, client, description} = project;
+      const {images, title, partnership, client, description, name} = project;
       let projectImages = "";
       images.forEach(image => {
         projectImages += `<div class="col-sm-6"><img src="/${image}" class="img-responsive modal-img"></div>`;
@@ -51,7 +51,7 @@ let projects = {
       const init = () => {
         try {
           router.loadSection(projectHTML,'#project-details') 
-          router.updateHead(`${route[0]}/${route[1]}`, `${route[1]} | ${route[0]}`, "")
+          router.updateHead(`${route[0]}/${route[1]}`, `${name} | Projectos`, "")
         } catch (error) {
           setTimeout(() => {
             init()
