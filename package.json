@@ -13,7 +13,7 @@
     "bootstrap": "^4.4.1",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "owl.carousel": "^2.3.4",
     "page": "^1.11.5"
   },
