@@ -7,7 +7,7 @@ let faqs = {
       faqHTML +=`
       <div class="faq-wrapper">
         <div class="faq-header" faq="${i + 1}" open="false">
-          <p>${faq[0]} <svg viewBox="0 0 50 50"><path d="M24.909 6.533v37.041M6.728 25.621h36.664" fill="none" stroke="#000" stroke-width="11.511" stroke-linecap="round"/></svg></p>
+          <p>${faq[0]} </p><svg viewBox="0 0 50 50"><path d="M24.909 6.533v37.041M6.728 25.621h36.664" fill="none" stroke="#000" stroke-width="11.511" stroke-linecap="round"/></svg>
         </div>
         <div class="faq-body" faq="${i + 1}">
           <p>${faq[1]}</p>

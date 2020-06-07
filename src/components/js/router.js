@@ -1,3 +1,4 @@
+import config from './config';
 import projects from './projectsSection'
 import faqs from './faqSection';
 
@@ -18,12 +19,7 @@ let router = {
     } 
   },
   getRoute: (e) => {
-    let hostname;
-    if(window.location.hostname === 'localhost'){
-      hostname = 'localhost:3000';
-    } else {
-      hostname = window.location.hostname;
-    }
+    let hostname = config.getHostname();
     let route = "/";
     try {
       route = e.target.closest("a").getAttribute("href");
@@ -111,11 +107,11 @@ let router = {
     } catch (error) {
       let script = document.createElement('script');
       script.src = `js/${page}.js`;
-      document.head.appendChild(script);
-      document.querySelector("#router-container").scrollIntoView();
       script.onload = () => {
         router.loadPage(page);
       }; 
+      document.head.appendChild(script);
+      document.querySelector("#router-container").scrollIntoView();
     }
   },
   updateHead: (url, title, description) =>{

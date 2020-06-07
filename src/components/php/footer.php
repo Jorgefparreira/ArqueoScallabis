@@ -17,14 +17,11 @@
 		</div>
 	</div>
 </footer>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvewJnnhpKz6lLe9TUwOkHII9KHO1x7yE"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo $mapsKey; ?>"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=<?php echo $recaptchaV3Public; ?>"></script>
+
+<script src="/js/polyfills.js"></script>
 <script src="/js/bundle.js"></script>
-<script>
-	function recaptchaCallback () {
-		recaptcha = true;
-	}
-</script>
 
 </body>
 

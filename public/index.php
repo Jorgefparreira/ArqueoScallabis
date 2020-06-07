@@ -1,3 +1,4 @@
+<?php require_once($_SERVER['DOCUMENT_ROOT'] ."/php/config.php");?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,19 +71,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>Quem Somos</h2> 
+				<h2>Quem Somos <?php echo $url; ?></h2> 
 			</div>
 			<div class="col-md-4">
 				<img src="/img/QuemSomos.jpg" alt="Criança a correr" class="img-responsive text-img">
 			</div>
 			<div class="col-md-8">
-				<p>A ArqueoScallabis é uma empresa no ramo da Arqueologia, salvaguarda e gestão patrimonial, que nasceu da
-					vontade de um grupo de profissionais, todos formados em Arqueologia e História pela Faculdade de Letras de
-					Lisboa e com um percurso consolidado na área, através dos mais diversos trabalhos, em vários pontos do País.
-					Sediada na secular cidade de Santarém, a ArqueoScallabis está estruturada de forma a dar resposta aos mais
-					variados projectos no âmbito da minimização de impactes sobre o património, seja através da reabilitação
-					urbana, obras públicas, estudos de impacte ambiental, ou qualquer outro projecto que necessite da componente
-					arqueológica para ser concluído com sucesso.
+				<p>A ArqueoScallabis é uma empresa no ramo da Arqueologia, salvaguarda e gestão patrimonial, que nasceu da vontade de um grupo de profissionais, todos formados em Arqueologia e História pela Faculdade de Letras de Lisboa e com um percurso consolidado na área, através dos mais diversos trabalhos, em vários pontos do País. Sediada na secular cidade de Santarém, a ArqueoScallabis está estruturada de forma a dar resposta aos mais variados projectos no âmbito da minimização de impactes sobre o património, seja através da reabilitação urbana, obras públicas, estudos de impacte ambiental, ou qualquer outro projecto que necessite da componente arqueológica para ser concluído com sucesso.
 				</p>
 			</div>
 		</div> 
@@ -90,15 +85,11 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h2>Missão</h2>
-				<p>A nossa missão é contribuir de forma inovadora e positiva para os projectos dos nossos clientes, com serviços
-					realizados de acordo com as normas de qualidade e excelência que prezamos dentro da nossa Empresa. </p>
+				<p>A nossa missão é contribuir de forma inovadora e positiva para os projectos dos nossos clientes, com serviços realizados de acordo com as normas de qualidade e excelência que prezamos dentro da nossa Empresa. </p>
 			</div>
 			<div class="col-md-6">
 				<h2>Valores</h2>
-				<p>Caracterizamo-nos pelo gosto e respeito pelo Património Histórico, Arqueológico e Natural, assim como pelo
-					seu papel na nossa herança e identidade cultural.
-					Ao mesmo tempo valorizamos uma relação transparente e em parceria estreita com os nossos clientes, oferecendo
-					soluções de qualidade adaptadas aos seus projectos.
+				<p>Caracterizamo-nos pelo gosto e respeito pelo Património Histórico, Arqueológico e Natural, assim como pelo seu papel na nossa herança e identidade cultural. Ao mesmo tempo valorizamos uma relação transparente e em parceria estreita com os nossos clientes, oferecendo soluções de qualidade adaptadas aos seus projectos.
 				</p>
 			</div>
 		</div> 
@@ -106,18 +97,17 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h2>Equipa</h2>
-				<p>A ArqueoScallabis é composta por uma equipa multidisciplinar, jovem e dinâmica, com elevados padrões éticos e
-					profissionais, com experiência nas áreas da Arqueologia, Museologia e Serviços Educativos. </p>
+				<p>A ArqueoScallabis é composta por uma equipa multidisciplinar, jovem e dinâmica, com elevados padrões éticos e profissionais, com experiência nas áreas da Arqueologia, Museologia e Serviços Educativos. </p>
 			</div>
 			<div class="col-md-6">
 				<h2>Serviços</h2>
 				<p class="service-list">Estudos de Impacte Ambiental - Vertente Patrimonial; <br>
-					Prospecção arqueológica; <br>
-					Acompanhamento arqueológico; <br>
-					Escavação arqueológica; <br>
-					Elaboração de Cartas arqueológicas; <br>
-					Musealização de espaços; <br>
-					Serviços Educativos;</p>
+				Prospecção arqueológica; <br>
+				Acompanhamento arqueológico; <br>
+				Escavação arqueológica; <br>
+				Elaboração de Cartas arqueológicas; <br>
+				Musealização de espaços; <br>
+				Serviços Educativos;</p>
 			</div>
 		</div> 
 
@@ -178,12 +168,13 @@
 						<p id="visible-comment" class="comment-style"></p>
 						<p class="comment-style" id="visible-comment2"></p>
 					</div>
-					<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-					<!-- live-key: 6LcLj4UUAAAAAO_tHhloF4O5YUQOQxEQq_tSkVXk -->
+					<input type="hidden" id="g-recaptcha-response-v3" name="g-recaptcha-response-v3">
+					<div id="contact-us-recaptcha"></div>
 					<span class="form-error-notice" id="captcha-help">Please check that you are not a robot.</span>
 					<br>
 					<button type="submit" value="Send" class="btn btn-primary submit-btn" id="submit-button"><svg width="16" height="16" viewBox="0 0 16 16" fill="#fff"><path d="M0 9l4 1.5L6 16l2.861-3.82L14 14l2-14L0 9zm7.169 2.44l-.916 2.485-1.086-3.118 8.402-7.631-6.4 8.264z"></path></svg> Enviar</button>
 				</form>
+				<div id="captcha-wrapper"></div>
 			</div> 
 			<br>
 			<div class="col-md-6">
@@ -251,8 +242,10 @@
 		</div>
 	</div>
 </footer>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvewJnnhpKz6lLe9TUwOkHII9KHO1x7yE"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo $mapsKey; ?>"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=<?php echo $recaptchaV3Public; ?>"></script>
+
+<script src="/js/polyfills.js"></script>
 <script src="/js/bundle.js"></script>
 
 </body>

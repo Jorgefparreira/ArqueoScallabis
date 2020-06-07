@@ -5,13 +5,12 @@ const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
-const browserSync = require("browser-sync").create();
 
 // INDEX PAGE
 
-const concatHTML = () => {
-  return gulp.src(['./src/components/html/header.html','./src/index.html','./src/components/html/footer.html'])
-    .pipe(concat('index.html'))
+const concatPHP = () => {
+  return gulp.src(['./src/components/php/header.php','./src/index.php','./src/components/php/footer.php'])
+    .pipe(concat('index.php'))
     .pipe(gulp.dest('./public/'))
 }
 
@@ -19,15 +18,6 @@ const movePages = () => {
   return gulp.src('./src/pages/*.js')
     .pipe(gulp.dest('./public/js/'))
 }
-
-// cons = () => {
-//   browserSync.init({
-//     open: false,
-//     proxy: "http://localhost/",
-//     baseDir: "./public",
-//     notify: false
-//   });
-// };
 
 const sassDev = () => {
   return gulp.src('./src/scss/styles.scss')
@@ -39,11 +29,10 @@ const sassDev = () => {
 
 function watchFiles() {
   gulp.watch('src/scss/*.scss', sassDev);
-  gulp.watch('src/pages/index.html', concatHTML);
-  gulp.watch('src/components/html/*.html', concatHTML);
-  gulp.watch('src/*.html', concatHTML);
+  gulp.watch('src/pages/index.php', concatPHP);
+  gulp.watch('src/components/php/*.php', concatPHP);
+  gulp.watch('src/*.php', concatPHP);
   gulp.watch('src/pages/*.js', movePages);
-  // gulp.watch("src/**/*.*").on("change", browserSync.reload);
 }
 
 exports.default = gulp.parallel(watchFiles);
@@ -56,7 +45,7 @@ const sassBuild = () => {
 }
 
 const htmlMinify = () => {
-  return gulp.src('public/*.html')
+  return gulp.src('public/*.php')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
