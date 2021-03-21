@@ -11,6 +11,7 @@
 
 		gtag('config', 'UA-106585154-2');
 	</script>
+  <base href="/">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,7 +60,8 @@
           <li onclick="scrollToSection('about')" id="projects-link"><span>Sobre</li>
           <li onclick="scrollToSection('services')" id="projects-link"><span>Serviços</li>
           <li onclick="scrollToSection('projects')" id="projects-link"><span>Projectos</li>
-          <li class="alentejo-link"><a href="/clientes">Clientes</a></li>
+          <li class="alentejo-link"><a href="/clientes" target="_self">Clientes</a></li>
+          <li class="alentejo-link"><a href="/press" target="_self">Press</a></li>
           <li onclick="scrollToSection('faqs')" id="faqs-link"><span>FAQ's</li>
 					<li onclick="scrollToSection('contact')" id="contact-link"><span>Contactos</li>
 

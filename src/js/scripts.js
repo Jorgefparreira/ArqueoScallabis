@@ -16,7 +16,7 @@ function scrollToSection(section){
   $('html, body').animate({
     scrollTop: $("#"+section).offset().top -70
   }, 700);
-}
+} 
 
 window.addEventListener('load', function(event) {
   var url_string = window.location.href;

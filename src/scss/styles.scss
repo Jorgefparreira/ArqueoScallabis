@@ -524,6 +524,9 @@ footer p {
     float: left;
     margin-bottom: 15px;
   }
+  .navbar-brand span{
+    display: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -541,6 +544,12 @@ footer p {
   }
   .nav .alentejo-link {
     width: 110px;
+  }
+}
+
+@media (max-width: 850px) and (min-width: 768px) {
+  .nav .alentejo-link {
+    width: 70px;
   }
 }
 

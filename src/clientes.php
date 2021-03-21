@@ -46,6 +46,7 @@
           <li> <a href="/?section=services">Serviços</a></li>
           <li> <a href="/?section=projects">Projectos</a></li>
           <li class="alentejo-link"><a href="#" style="background-color: #e7e7e7;">Clientes</a></li>
+          <li class="alentejo-link"><a href="/press" >Press</a></li>
           <li> <a href="/?section=faqs">FAQ's</a></li>
 					<li> <a href="/?section=contact">Contactos</a></li>          
           

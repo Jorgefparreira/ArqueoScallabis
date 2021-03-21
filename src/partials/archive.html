@@ -1,7 +1,7 @@
 <div class="scrollspy-offset"></div>
 <hr  id="archive">
 <div class="projects-return" ng-mouseenter="swing = 'swing-ani'" ng-mouseleave="swing = ''">
-	<a href="#projects"><h3><span class="{{swing}}">&laquo;</span> Projectos</h3></a>
+	<a href="/#projects"><h3><span class="{{swing}}">&laquo;</span> Projectos</h3></a>
 </div>
 
 <br>
@@ -14,12 +14,12 @@
 		
 			<div ng-repeat="project in projects">
 					<div class="col-md-4">
-							<div class="project-box"><h3 class="list-title">{{project.name}}</h3><a ng-href="/#!/archive/details/{{project.id}}#projects"><img type="button" ng-src="{{project.coverImage}}" class="img-responsive project-img"></a></div>						
+							<div class="project-box"><h3 class="list-title">{{project.name}}</h3><a ng-href="/archive/details/{{project.id}}#projects"><img type="button" ng-src="{{project.coverImage}}" class="img-responsive project-img"></a></div>						
 						
 					</div>
 			</div>
 		</div> <!-- end row -->
-		<a href="#projects"><p>&laquo; Voltar</p>	</a>
+		<a href="/#projects"><p>&laquo; Voltar</p>	</a>
 	</section>
 </div> <!-- end container -->
 <div id="contact" class="scrollspy-offset"></div>
